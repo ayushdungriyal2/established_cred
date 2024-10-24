@@ -1,85 +1,267 @@
 ---
 import Container from "./Container.astro"
 
-const blogPosts = [
+const templates = [
   {
-    title: "Automatically Pause SL Campaigns For Holidays",
-    image: "https://cdn.discordapp.com/attachments/1283467168976994304/1293257024980652156/image.png?ex=6706b6f6&is=67056576&hm=0f10ef05b706b3c5121cb1392c9709a0f9b4d775af7750f9d6e44119b2aee80e&",
-    description: "When there is a holiday, you don't want to be sending emails. Use this template to automatically pause your campaigns.",
+    name: "Lead Scoring Automation",
+    category: "Sales",
+    downloadLink: "https://example.com/template2",
+    description: "Automatically score your leads based on their behavior and engagement.",
+    image: "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80"
   },
   {
-    title: "De fuga fugiat lorem ispum laboriosam expedita.",
-    image: "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
-    description: "Voluptates harum aliquam totam, doloribus eum impedit atque! Temporibus...",
+    name: "Customer Onboarding Flow",
+    category: "Customer Success",
+    downloadLink: "https://example.com/template3",
+    description: "Streamline your customer onboarding process with this automated workflow.",
+    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=2832&q=80"
   },
   {
-    title: "De fuga fugiat lorem ispum laboriosam expedita.",
-    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-    description: "Voluptates harum aliquam totam, doloribus eum impedit atque! Temporibus...",
+    name: "Lead Scoring Automation",
+    category: "Sales",
+    downloadLink: "https://example.com/template2",
+    description: "Automatically score your leads based on their behavior and engagement.",
+    image: "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80"
+  },
+  {
+    name: "Customer Onboarding Flow",
+    category: "Customer Success",
+    downloadLink: "https://example.com/template3",
+    description: "Streamline your customer onboarding process with this automated workflow.",
+    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=2832&q=80"
+  },
+  {
+    name: "Lead Scoring Automation",
+    category: "Sales",
+    downloadLink: "https://example.com/template2",
+    description: "Automatically score your leads based on their behavior and engagement.",
+    image: "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80"
+  },
+  {
+    name: "Customer Onboarding Flow",
+    category: "Customer Success",
+    downloadLink: "https://example.com/template3",
+    description: "Streamline your customer onboarding process with this automated workflow.",
+    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=2832&q=80"
+  },
+  {
+    name: "Lead Scoring Automation",
+    category: "Sales",
+    downloadLink: "https://example.com/template2",
+    description: "Automatically score your leads based on their behavior and engagement.",
+    image: "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80"
+  },
+  {
+    name: "Customer Onboarding Flow",
+    category: "Customer Success",
+    downloadLink: "https://example.com/template3",
+    description: "Streamline your customer onboarding process with this automated workflow.",
+    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=2832&q=80"
+  },
+  {
+    name: "Lead Scoring Automation",
+    category: "Sales",
+    downloadLink: "https://example.com/template2",
+    description: "Automatically score your leads based on their behavior and engagement.",
+    image: "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80"
+  },
+  {
+    name: "Customer Onboarding Flow",
+    category: "Customer Success",
+    downloadLink: "https://example.com/template3",
+    description: "Streamline your customer onboarding process with this automated workflow.",
+    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=2832&q=80"
+  },
+  {
+    name: "Lead Scoring Automation",
+    category: "Sales",
+    downloadLink: "https://example.com/template2",
+    description: "Automatically score your leads based on their behavior and engagement.",
+    image: "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80"
+  },
+  {
+    name: "Customer Onboarding Flow",
+    category: "Customer Success",
+    downloadLink: "https://example.com/template3",
+    description: "Streamline your customer onboarding process with this automated workflow.",
+    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=2832&q=80"
+  },
+  {
+    name: "Lead Scoring Automation",
+    category: "Sales",
+    downloadLink: "https://example.com/template2",
+    description: "Automatically score your leads based on their behavior and engagement.",
+    image: "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80"
+  },
+  {
+    name: "Customer Onboarding Flow",
+    category: "Customer Success",
+    downloadLink: "https://example.com/template3",
+    description: "Streamline your customer onboarding process with this automated workflow.",
+    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=2832&q=80"
+  },
+  {
+    name: "Lead Scoring Automation",
+    category: "Sales",
+    downloadLink: "https://example.com/template2",
+    description: "Automatically score your leads based on their behavior and engagement.",
+    image: "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80"
+  },
+  {
+    name: "Customer Onboarding Flow",
+    category: "Customer Success",
+    downloadLink: "https://example.com/template3",
+    description: "Streamline your customer onboarding process with this automated workflow.",
+    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=2832&q=80"
   },
 ];
 ---
 
-<div id="blog">
+<div id="templates">
   <Container>
     <div class="mb-12 space-y-2 text-center">
-      <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">Free Automation Templates</h2>
-      <p class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300">
+      <h2 class="text-3xl font-bold text-gray-800 md:text-4xl darkcancel:text-white">
+        <span class="text-primary">100+ </span>Free Automation Templates !!
+      </h2>
+      <p class="lg:mx-auto lg:w-6/12 text-gray-600 darkcancel:text-gray-300">
         Get started with our free automation templates. We have a wide range of templates for you to choose from.
       </p>
     </div>
     
-    <div class="mb-8">
+    <div class="mb-8 w-full flex justify-between items-center">
+      <div class="relative w-[20%]">
+        <select 
+          id="categoryFilter"
+          class="w-full p-2 pl-3 pr-10 border border-gray-300 rounded-md appearance-none bg-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/50"
+        >
+          <option value="">All Categories</option>
+          <option value="Email Automation">Email Automation</option>
+          <option value="Sales">Sales</option>
+          <option value="Customer Success">Customer Success</option>
+        </select>
+        <!-- Custom dropdown arrow -->
+        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+
       <input
         type="text"
         id="searchInput"
         placeholder="Search templates..."
-        class="w-full p-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+        class="w-[25%] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
       />
     </div>
     
-    <div id="blogPosts" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {blogPosts.map((post) => (
-        <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+    <div id="templateContainer" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {templates.map((template) => (
+        <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 darkcancel:shadow-none darkcancel:border-gray-700 darkcancel:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10"
+             data-category={template.category}>
           <div class="relative overflow-hidden rounded-xl">
-            <img src={post.image}
-              alt="art cover" loading="lazy" width="1000" height="300" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+            <img 
+              src={template.image}
+              alt={template.name} 
+              loading="lazy" 
+              width="1000" 
+              height="300" 
+              class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+            />
           </div>
           <div class="mt-6 relative">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-              {post.title}
+            <span class="text-sm text-primary mb-2 block">{template.category}</span>
+            <h3 class="text-2xl font-semibold text-gray-800 darkcancel:text-white">
+              {template.name}
             </h3>
-            <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-              {post.description}
+            <p class="mt-6 mb-8 text-gray-600 darkcancel:text-gray-300">
+              {template.description}
             </p>
-            <a class="inline-block" href="#">
-              <span class="text-info dark:text-blue-300">Download</span>
+            <a class="inline-block" href={template.downloadLink}>
+              <span class="text-info darkcancel:text-blue-300">Download</span>
             </a>
           </div>
         </div>
       ))}
     </div>
+
+    <div class="mt-8 text-center" id="showMoreContainer">
+      <button
+        id="showMoreBtn"
+        class="hidden px-6 py-3 text-white bg-primary rounded-md hover:bg-primary/80 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50"
+      >
+        Show More
+      </button>
+    </div>
   </Container>
 </div>
 
 <script>
-  const searchInput = document.getElementById('searchInput') as HTMLInputElement | null;
-  const blogPostsContainer = document.getElementById('blogPosts');
-  
-  if (searchInput && blogPostsContainer) {
-    const blogPosts = Array.from(blogPostsContainer.children) as HTMLElement[];
+  const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+  const categoryFilter = document.getElementById('categoryFilter') as HTMLSelectElement;
+  const templateContainer = document.getElementById('templateContainer');
+  const showMoreBtn = document.getElementById('showMoreBtn') as HTMLButtonElement;
 
-    searchInput.addEventListener('input', function() {
-      const searchTerm = this.value.toLowerCase();
+  const ITEMS_PER_PAGE = 6;
+  let currentPage = 1;
 
-      blogPosts.forEach(post => {
-        const title = post.querySelector('h3')?.textContent?.toLowerCase() || '';
-        if (title.includes(searchTerm)) {
-          post.style.display = '';
-        } else {
-          post.style.display = 'none';
-        }
-      });
+  function filterTemplates() {
+    if (!templateContainer) return;
+
+    const searchTerm = searchInput?.value.toLowerCase() || '';
+    const selectedCategory = categoryFilter?.value || '';
+    const templates = Array.from(templateContainer.children) as HTMLElement[];
+    
+    let visibleCount = 0;
+    let totalMatches = 0;
+
+    templates.forEach((template, index) => {
+      const title = template.querySelector('h3')?.textContent?.toLowerCase() || '';
+      const category = template.dataset.category?.toLowerCase() || '';
+      const matchesSearch = title.includes(searchTerm);
+      const matchesCategory = !selectedCategory || category.toLowerCase() === selectedCategory.toLowerCase();
+
+      // Count total matches regardless of pagination
+      if (matchesSearch && matchesCategory) {
+        totalMatches++;
+      }
+
+      // Show/hide based on filters and current page
+      const isInCurrentPage = totalMatches <= currentPage * ITEMS_PER_PAGE;
+      if (matchesSearch && matchesCategory && isInCurrentPage) {
+        template.style.display = '';
+        visibleCount++;
+      } else {
+        template.style.display = 'none';
+      }
     });
+
+    updateShowMoreButton(totalMatches);
   }
+
+  function updateShowMoreButton(totalMatches: number) {
+    if (!showMoreBtn) return;
+
+    const shouldShowButton = totalMatches > currentPage * ITEMS_PER_PAGE;
+    showMoreBtn.classList.toggle('hidden', !shouldShowButton);
+  }
+
+  // Event listeners
+  searchInput?.addEventListener('input', () => {
+    currentPage = 1; // Reset pagination when searching
+    filterTemplates();
+  });
+
+  categoryFilter?.addEventListener('change', () => {
+    currentPage = 1; // Reset pagination when changing category
+    filterTemplates();
+  });
+
+  showMoreBtn?.addEventListener('click', () => {
+    currentPage++;
+    filterTemplates();
+  });
+
+  // Initial filter
+  filterTemplates();
 </script>
