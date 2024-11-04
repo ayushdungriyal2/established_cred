@@ -1,0 +1,620 @@
+[
+    {
+       "name": "Notification for replies (simple)",
+       "category": "Notification for replies (simple)",
+       "description": "Notify YOUR AGENCY and YOUR CLIENTS about category changes when a lead replies.",
+       "image": "notification_for_smartlead_replies.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1MGpxpKU28xdBI7DWdds2m6DhhOEbI9NO?usp=drive_link"
+     },
+     {
+       "name": "Notification for replies (client comms)",
+       "category": "Notification for replies (simple)",
+       "description": "Automation to notify agency and clients of lead category changes, log engaged leads in a sheet, and requires Smartlead client database.",
+       "image": "notification_for_smartlead_replies.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1R47kJIi0JH7AYaopZkwbmWdVf6Pe2J8A?usp=drive_link"
+     },
+     {
+       "name": "Notification for replies (simplest)",
+       "category": "Notification for replies (simple)",
+       "description": "Automation to notify you of lead category changes, with options for client notifications and analytics.",
+       "image": "notification_for_smartlead_replies.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1rrCOuQZ8cup14_3_-MmUlMC1nVrseKmG?usp=drive_link"
+     },
+     {
+       "name": "Smartlead client onboarding SOPs",
+       "category": "Smartlead client onboarding SOPs",
+       "description": "Automation to streamline client management by adding client folders, integrating webhooks, and hiding specific categories in Smartlead, with Clay client onboarding recommended.",
+       "image": "smartlead_client_onboarding_sops.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1MNIaiv32EfeSngpYa9Xe5f_v5r7G0ELa?usp=drive_link"
+     },
+     {
+       "name": "Clay client onboarding SOPs",
+       "category": "client onboarding SOPs",
+       "description": "Automation to add a client folder in Clay and link its ID to your PJM tool for future automations, recommended with Smartlead onboarding SOPs..",
+       "image": "clay_client_onboarding_sops.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1u8ng9vg_nYxzmB_Szopw8V9H6A-iZoJy?usp=drive_link"
+     },
+     {
+       "name": "Campaign backups & restore",
+       "category": "Backup campaign sequences",
+       "description": "Automation to back up campaign and subsequence sequences for easy restoration and duplication.",
+       "image": "campaign_backups_restore.svg",
+       "downloadLink": ""
+     },
+     {
+       "name": "Duplicate subsequence in Smartlead",
+       "category": "Duplicate subsequence in Smartlead",
+       "description": "Automation to duplicate a subsequence or campaign to another for easy replication, adaptable for various databases with Campaign backups required.",
+       "image": "duplicate_subsequence_in_smartlead.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1eLZxOHZtRlaZ8qMuOVrDBuEtmTrwbidM?usp=drive_link"
+     },
+     {
+       "name": "Add client dropdown field to Hubspot",
+       "category": "Add client dropdown field to Hubspot",
+       "description": "Automation to add a Client dropdown field in HubSpot for contacts, companies, and deals, and auto-create a contact list",
+       "image": "add_client_dropdown_field_to_hubspot.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/10VLUMNTEBOHR07vBjxiFNycr5tA262ET?usp=drive_link"
+     },
+     {
+       "name": "Add BCC address & custom tracking",
+       "category": "Add BCC address & custom tracking",
+       "description": "Automation to monitor open tracking and Bcc emails in email accounts, adding missing fields, with optional DNS checks for DMARC and open tracking.",
+       "image": "add_bcc_address_custom_tracking.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1kqbO8vlXZ2BPcpqIYZtaa7pSygBEwexV?usp=drive_link"
+     },
+     {
+       "name": "Create tasks for calendar events",
+       "category": "Create tasks for calendar events",
+       "description": "Automation to send a Slack notification for unaccepted calendar events and create a HubSpot task to follow up with leads.",
+       "image": "create_tasks_for_calendar_events.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1oth5M56cE3D-EPzeR3T5GGvCh0_d8iea?usp=drive_link"
+     },
+     {
+       "name": "Hubspot 2-way sync (Hubspot to smartlead)",
+       "category": "Hubspot 2-way sync (lead category)",
+       "description": "Automation to sync Smartlead category changes within HubSpot, requiring completed HubSpot and Smartlead properties sync",
+       "image": "hubspot_2_way_sync_lead_category.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1NRvRlCZ-ux-U3l1ZE0vglyCLUhWmbDMb?usp=drive_link"
+     },
+     {
+       "name": "Hubspot 2-way sync (smartlead to hubspot)",
+       "category": "Hubspot 2-way sync (lead category)",
+       "description": "Automation to sync Smartlead category changes in HubSpot, requiring prior completion of the HubSpot and Smartlead properties sync.",
+       "image": "hubspot_2_way_sync_lead_category.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1ZxrsqB-DZPNSvE96-Ooqw1cuHiMn2q2Q?usp=drive_link"
+     },
+     {
+       "name": "Auto-categorize leads with AI",
+       "category": "Auto-categorize leads with AI",
+       "description": "Automation to capture new replies in Smartlead and use customizable AI for lead categorization.",
+       "image": "auto_categorize_leads_with_ai.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1ddTHKfXIBvnYKXNgdiEMoiuawc5EeXPL?usp=drive_link"
+     },
+     {
+       "name": "Notification for 'thread' replies",
+       "category": "Notification for 'thread' replies",
+       "description": "Automation to notify you of new replies in Gmail or Slack threads for quick lead responses, with an optional feature to pause all campaigns upon a lead's reply.",
+       "image": "notification_for_thread_replies_1.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1eNnvXWRzMmP8nAZDq2dULu9ui9_L3DqJ?usp=drive_link"
+     },
+     {
+       "name": "Notification for 'thread' replies(client comms)",
+       "category": "Notification for 'thread' replies",
+       "description": "Automation to notify you of new replies in Gmail or Slack threads for prompt lead engagement, with an optional feature to pause all campaigns upon a lead's response",
+       "image": "notification_for_thread_replies_1.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1MFlgxfXcSp8Whmw1f9HxEt_O55Y0nY3g?usp=drive_link"
+     },
+     {
+       "name": "Notifications for untracked replies (Step-1)",
+       "category": "Notifications for untracked replies (Step-1)",
+       "description": "Automation to send Slack notifications for untracked replies and manage a blocklist for domains, emails, and keywords.",
+       "image": "notifications_for_untracked_replies.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1nyBuIABr2-YamKPujM68TaEcZ3uO5mhI?usp=drive_link"
+     },
+     {
+       "name": "Notifications for untracked replies(Step-2)",
+       "category": "Notifications for untracked replies (Step-1)",
+       "description": "Automation to send Slack notifications for untracked replies and facilitate the addition of domains, emails, and keywords to a blocklist.",
+       "image": "notifications_for_untracked_replies.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1h3sZC4VJbPcAtk0mcfY2jQE5ZFLBW8bZ?usp=drive_link"
+     },
+     {
+       "name": "Enrich Smartlead contacts using Clay",
+       "category": "Enrich Smartlead contacts using Clay",
+       "description": "Automation to enrich Smartlead contacts using Clay with customizable triggers, adaptable for various use cases like adding mobile numbers.",
+       "image": "enrich_smartlead_contacts_using_clay.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1OarUZAQ3FZYGRJvkUyNxrMa0jlYcsA-x?usp=drive_link"
+     },
+     {
+       "name": "Tasks for email disconnects Many Options (tasks and analytics)}",
+       "category": "Tasks for email disconnects (alternatives)",
+       "description": "Automation to notify you of disconnected email accounts, attempt automatic reconnections via the Smartlead API, and optionally log the accounts, with multiple notification options available.",
+       "image": "tasks_for_email_disconnects_alternatives.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1xJzVmMnL-3CxKBts7P3xL8jzR_bsS_85?usp=drive_link"
+     },
+     {
+       "name": "Tasks for email disconnects Simple Version (many options: tasks)",
+       "category": "Tasks for email disconnects (alternatives)",
+       "description": "If you don't need analytics, use the simple version.",
+       "image": "tasks_for_email_disconnects_alternatives.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1gJPs7SXQqWEKJVu5BpPdByni-p_kcKpx?usp=drive_link"
+     },
+     {
+       "name": "Tasks for email disconnects Simplest Version (notifications)",
+       "category": "Tasks for email disconnects (alternatives)",
+       "description": "If you don't need tasks or analytics, use the simplest version.",
+       "image": "tasks_for_email_disconnects_alternatives.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1stUKk1AsjRZb8S-BPf0rJsxd0PlOJ7Nc?usp=drive_link"
+     },
+     {
+       "name": "Send campaign copy to Smartlead",
+       "category": "Send campaign copy to Smartlead",
+       "description": "Automation to send campaign copy directly to Smartlead for streamlined workflow and management, with options for other platforms like Airtable or Notion.",
+       "image": "send_campaign_copy_to_smartlead.svg",
+       "downloadLink": "https://drive.google.com/file/d/1nqZ9Nog4IPAC5cjSvYwx6KgH_5RRo2-T/view?usp=drive_link"
+     },
+     {
+       "name": "Create copywriting spintax",
+       "category": "Create copywriting spintax",
+       "description": "Automation to add Spintax to your email copywriting for dynamic and varied content, adaptable for other platforms like Airtable or Notion.",
+       "image": "create_copywriting_spintax.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1mkiElw_9Nmt57LuC7JPlpKUYklVkxQhj?usp=drive_link"
+     },
+     {
+       "name": "Store OLD engaged leads in Clickup",
+       "category": "Store OLD engaged leads in Clickup",
+       "description": "Automation to log old engaged leads in ClickUp for detailed lead tracking and dashboard creation, requiring initial setup of the ClickUp Agency Workspace.",
+       "image": "store_old_engaged_leads_in_clickup.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1FetdMZj34CMqMkDksRNaM4v13xjGUPZh?usp=drive_link"
+     },
+     {
+       "name": "Store NEW engaged leads in Clickup",
+       "category": "Store NEW engaged leads in Clickup",
+       "description": "Automation to notify your agency and clients about category changes from lead replies, and log new engaged leads in ClickUp for dashboard creation, requiring ClickUp Agency Workspace setup.",
+       "image": "store_new_engaged_leads_in_clickups.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1iID6EfMyiAeT0yqVP2lQSOYlWNH7xYpu?usp=drive_link"
+     },
+     {
+       "name": "Sync HubSpot and Smartlead properties (Sync Campaigns)",
+       "category": "Sync HubSpot and Smartlead properties",
+       "description": "Automation to sync Smartlead properties in HubSpot, with recommendations to leverage client and campaign versions in onboarding SOPs.",
+       "image": "sync_hubspot_and_smartlead_properties.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1ULWxm9aPnVURgpc9Cw9amTbgGctgWjew?usp=drive_link"
+     },
+     {
+       "name": "Sync HubSpot and Smartlead properties (Sync Clients)",
+       "category": "Sync HubSpot and Smartlead properties",
+       "description": "Automation to sync Smartlead properties in HubSpot, with suggestions to use the Client and Campaign versions for onboarding and monitoring",
+       "image": "sync_hubspot_and_smartlead_properties.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1x7927q-bXhe8s6jKfYcrs3DZlq_E0AQa?usp=drive_link"
+     },
+     {
+       "name": "Sync HubSpot and Smartlead properties(Sync Categories)",
+       "category": "Sync HubSpot and Smartlead properties",
+       "description": "Automation to sync Smartlead properties in HubSpot, with recommendations to use the Client and Campaign versions in onboarding and monitoring processes.",
+       "image": "sync_hubspot_and_smartlead_properties.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1irtr4I6NPmeUaUP9LlIrvYRqlY3QkhnZ?usp=drive_link"
+     },
+     {
+       "name": "Make.com scenario backups",
+       "category": "Make.com scenario backups",
+       "description": "Automation to store copies of your Make automations in Google Drive for backup, preventing loss from accidental deletions.",
+       "image": "make_com_scenario_backups.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1C90sbW5lo3hFOeLtgeTe2rDkqRmXPtVV?usp=drive_link"
+     },
+     {
+       "name": "Smartlead client database",
+       "category": "Smartlead client database",
+       "description": "Automation to add and update Smartlead clients in Google Sheets, serving as a reference for future client management automations.",
+       "image": "smartlead_client_database.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1PPGSFX6Vqf6y93Akp7GymcU_i5gPed3z?usp=drive_link"
+     },
+     {
+       "name": "Automate responses to OOO emails",
+       "category": "Automate responses to OOO emails",
+       "description": "Automation to respond to out-of-office emails using Smartlead and Clay for timely follow-up and efficient communication.",
+       "image": "automate_responses_to_ooo_emails.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1ZVl7oQdFckvhPMGWSGbhwkV4l5rTl2-r?usp=drive_link"
+     },
+     {
+       "name": "Send Smartlead emails from Slack (Step 1 - Send to Slack)",
+       "category": "Send Smartlead emails from Slack",
+       "description": "Automation to send new replies to Slack for category changes, capture Slack responses for approval, and send emails to Smartlead contacts for streamlined communication.",
+       "image": "send_smartlead_emails_from_slack.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1qtrhIU17FjGNxM9Ll_KNlfyPyxvbYEok?usp=drive_link"
+     },
+     {
+       "name": "Send Smartlead emails from Slack(Step 2 - Request Approval)",
+       "category": "Send Smartlead emails from Slack",
+       "description": "Automation to send new replies to Slack for category changes, capture Slack responses for approval, and email Smartlead contacts directly from Slack.",
+       "image": "send_smartlead_emails_from_slack.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/186NO_YHcku5SYmef-8WR5VL5IxPQHhN0?usp=drive_link"
+     },
+     {
+       "name": "Send Smartlead emails from Slack(Step 3 - Send to Lead)",
+       "category": "Send Smartlead emails from Slack",
+       "description": "Automation to notify Slack of new replies for category changes, capture responses for approval, and email Smartlead contacts directly from Slack.",
+       "image": "send_smartlead_emails_from_slack.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1FZSm_s_YFDlSBiZkmJgYP9soK7xDmhpy?usp=drive_link"
+     },
+     {
+       "name": "Auto-add DKIM, DMARC & open tracking",
+       "category": "Auto-add DKIM, DMARC & open tracking",
+       "description": "Automation to add DKIM, DMARC, and open tracking settings to GoDaddy for enhanced email authentication and deliverability.",
+       "image": "auto_add_dkim_dmarc_open_tracking.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/18Gl4hY_CDvzLMsV0mnhcnYZ3HIDeN7sX?usp=drive_link"
+     },
+     {
+       "name": "High bounce and low leads (Version 2: Level 1)",
+       "category": "High bounce and low leads (alternatives)",
+       "description": "Automation to pause campaigns with bounce rates over 3% and notify you, plus Slack alerts for low 'leads not contacted' rates",
+       "image": "high_bounce_low_leads_alternatives.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1L1WtDgpBHB848H8IwAomjasEkRT9yHcX?usp=drive_link"
+     },
+     {
+       "name": "High bounce and low leads (Version 2: Level 2)",
+       "category": "High bounce and low leads (alternatives)",
+       "description": "Automation to pause campaigns with bounce rates over 3% and send Slack notifications for low 'leads not contacted' rates",
+       "image": "high_bounce_low_leads_alternatives.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1t8wKhrILv_bYz-271TNDCy7kX5RTcwIV?usp=drive_link"
+     },
+     {
+       "name": "High bounce and low leads (Version 2: Level 2.5)",
+       "category": "High bounce and low leads (alternatives)",
+       "description": "Automation to pause campaigns with bounce rates above 3% and notify you, plus Slack alerts for low 'leads not contacted' metrics",
+       "image": "high_bounce_low_leads_alternatives.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1jdMiKDyIje_UtdBz2fH30T_1h2rM5s3R?usp=drive_link"
+     },
+     {
+       "name": "High bounce and low leads (Version 2: Level 3)",
+       "category": "High bounce and low leads (alternatives)",
+       "description": "Automation to pause campaigns with bounce rates over 3% and notify you, plus Slack alerts for low 'leads not contacted' counts",
+       "image": "high_bounce_low_leads_alternatives.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1AnZSgzQmDjhqbZ7R37Az_few4QSF1AEB?usp=drive_link"
+     },
+     {
+       "name": "High bounce and low leads (Version 1: ideal for most users)",
+       "category": "High bounce and low leads (alternatives)",
+       "description": "Automation to pause campaigns with bounce rates over 3% and notify you, with Slack alerts for low 'leads not contacted' levels",
+       "image": "high_bounce_low_leads_alternatives.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1CtDlht1n9MBaoRuOyT1UvBBULIoMp_td?usp=drive_link"
+     },
+     {
+       "name": "Reply notifications (agency)",
+       "category": "Reply notifications (agency)",
+       "description": "Automation to notify your agency and clients of category changes when leads reply, ensuring effective lead management.",
+       "image": "reply_notifications_agency.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1Jxz_2nfhrHAK_MiNLH7gK2nLQvZCpFMt?usp=drive_link"
+     },
+     {
+       "name": "'thread' reply notifications (agency)",
+       "category": "Reply notifications (agency)",
+       "description": "Automation to notify you and your clients of new thread replies in Gmail or Slack, enabling quick responses for lead engagement.",
+       "image": "reply_notifications_agency.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/19-EwavnVf9HO5ERzXt_dYknQtVTC5CJl?usp=drive_link"
+     },
+     {
+       "name": "Smartlead calendar sync Level-1",
+       "category": "Smartlead calendar sync (alternatives)",
+       "description": "Automation to update Smartlead categories and pause leads in campaigns when a meeting is booked, plus CRM contact updates with tags and custom fields.",
+       "image": "smartlead_calendar_sync_1.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1pGdEnyp2yvHd78xFK2XmI7bVM1gIc3dc?usp=drive_link"
+     },
+     {
+       "name": "Smartlead calendar sync Level-2",
+       "category": "Smartlead calendar sync (alternatives)",
+       "description": "Automation to update Smartlead categories and pause leads when a meeting is booked, with optional CRM contact updates using tags and custom fields.",
+       "image": "smartlead_calendar_sync_1.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1C4v0W7bEcIUw6eGxgsZ_QQERUBrlUXFh?usp=drive_link"
+     },
+     {
+       "name": "Smartlead client database (agency)",
+       "category": "Smartlead client database (agency)",
+       "description": "Automation to add and update Smartlead clients in Google Sheets for streamlined client management and future automation reference.",
+       "image": "smartlead_client_database_agency.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1OUciVM5TK0Vbpu5EFIHfkYw0bwMLSRhW?usp=drive_link"
+     },
+     {
+       "name": "High bounce & low leads monitoring",
+       "category": "High bounce & low leads monitoring",
+       "description": "Automation to pause campaigns with bounce rates over 3% and notify you, while sending Slack alerts for low lead contact rates",
+       "image": "high_bounce_low_leads_monitoring.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/172sJc6Fzptn6EMTj95AILavhFK4uUNce?usp=drive_link"
+     },
+     {
+       "name": "Reply notifications (simple)",
+       "category": "Reply notifications (simple)",
+       "description": "Automation that notifies you of category changes triggered by lead replies for effective lead management.",
+       "image": "reply_notifications_simple.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1QAHw4DYn_aEjsQp818wOj0wJSoad7D9q?usp=drive_link"
+     },
+     {
+       "name": "'thread' replies (simple)",
+       "category": "Reply notifications (simple)",
+       "description": "Automation that notifies you of new replies in Gmail or Slack threads for quick responses to leads..",
+       "image": "reply_notifications_simple.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1HrTYPBGMruA0LaogWwasUPUVXGqrNps_?usp=drive_link"
+     },
+     {
+       "name": "Tasks for email disconnects",
+       "category": "Tasks for email disconnects",
+       "description": "Automation that notifies you of email disconnections and attempts automatic reconnections using the Smartlead API.",
+       "image": "tasks_for_email_disconnects.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1T0XjbYGSLEiuOiJ34VdDIFxRTZ0w2PS2?usp=drive_link"
+     },
+     {
+       "name": "Smartlead calendar sync",
+       "category": "Smartlead calendar sync",
+       "description": "This automation updates Smartlead categories and pauses leads in campaigns upon booking a meeting, ensuring smooth lead management and organization.",
+       "image": "smartlead_calendar_sync.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1BnpkCcKQSKpQRqIMXzPBe5SEXdMZ-Wgp?usp=drive_link"
+     },
+     {
+       "name": "Campaign monitoring and database",
+       "category": "Campaign monitoring and database",
+       "description": "This automation enhances your email campaigns by randomizing sending times for a more human-like approach, notifying you of low lead contacts or high bounce rates via Slack or Gmail, and logging essential statistics in Google Sheets for straightforward reporting",
+       "image": "smartlead_calendar_sync.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1Dn96BJskJsC3Wc-h3dgTvnLjhgSqMz7v?usp=drive_link"
+     },
+     {
+       "name": "Daily Campaign Monitoring",
+       "category": "Daily Campaign Monitoring",
+       "description": "This automation optimizes your email campaigns by randomizing the timing of your emails for a more human-like delivery, alerting you via Slack if lead contact rates are low or bounce rates are high, and recording your performance metrics in Google Sheets for easy access and reporting.",
+       "image": "daily_campaign_monitoring.svg",
+       "downloadLink": "https://drive.google.com/file/d/1EOpT_yLLqEAKsnWT2_dQ_Wlg8s1jSL2P/view?usp=drive_link"
+     },
+     {
+       "name": "Automated weekly reports (Simplest Version)",
+       "category": "Automated weekly reports (alternatives)",
+       "description": "This automation sends customizable reports to clients on a chosen schedule, with tasks for additional follow-ups",
+       "image": "weekly_reports.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1UvcGAr6bthonDCO_D5sm0d2FS831EM7T?usp=drive_link"
+     },
+     {
+       "name": "Automated weekly reports (Slack Version: More Complex (step 1))",
+       "category": "Automated weekly reports (alternatives)",
+       "description": "This automation sends customizable reports to clients on a set schedule and manages follow-up tasks.",
+       "image": "weekly_reports.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1wNoJVJJ_ty37HnEd3I43ypLyXEPnYFpZ?usp=drive_link"
+     },
+     {
+       "name": "Automated weekly reports (Slack Version: More Complex (step 2))",
+       "category": "Automated weekly reports (alternatives)",
+       "description": "This automation allows you to send scheduled reports to clients and manage follow-up tasks, utilizing a customizable email template.",
+       "image": "weekly_reports.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1v1xrbRmhS7X05ytYjkF5EJ1cYB1vYBaQ?usp=drive_link"
+     },
+     {
+       "name": "Automated weekly reports (Clickup Version: More Complex (step 2))",
+       "category": "Automated weekly reports (alternatives)",
+       "description": "This automation sends client reports on a customizable schedule, with one automation for automatic delivery and others for task management.",
+       "image": "weekly_reports.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/1de5g5jzz6eqvUJsLo4R_GN3jAiVHt1Mx?usp=drive_link"
+     },
+     {
+       "name": "Automated weekly reports (alternatives)",
+       "category": "Automated weekly reports (alternatives)",
+       "description": "This automation sends client reports on a customizable schedule, with one report sent automatically and others set as tasks, using a template from beefree.io and the Smartlead Client Database.",
+       "image": "weekly_reports.svg",
+       "downloadLink": ""
+     },
+     {
+       "name": "Automated weekly reports",
+       "category": "Automated weekly reports",
+       "description": "This automation sends internal reports of your all-time stats in Smartlead on a custom schedule, with customizable email templates from beefree.io and the Smartlead client database.",
+       "image": "weekly_reports.svg",
+       "downloadLink": "https://drive.google.com/drive/folders/16Adgfn5PTIAshnpK-MwhrVqaJfVAzo8v?usp=drive_link"
+     },
+     {
+       "name": "LinkedIn Job Scraper",
+       "category": "Linkedin Job Scraper",
+       "description": "Scrape Linkedin Jobs",
+       "image": "linkedin_job_scraper.png",
+       "downloadLink": ""
+     },
+     {
+       "name": "Auto Email Responder",
+       "category": "Email Responder",
+       "description": "Automatically replies to email",
+       "image": "auto_email_responder.jpeg",
+       "downloadLink": "https://drive.google.com/drive/folders/1ofXCeODVZaK9nkA90JheP6l_Xq_SGLCR?usp=drive_link"
+     },
+     {
+       "name": "Add to Content CRM",
+       "category": "Add to Content CRM",
+       "description": "Add to Content CRM",
+       "image": "add_to_content_crm.png",
+       "downloadLink": "https://drive.google.com/drive/folders/16l7lbPX04YXcaoSjLP1WHDKyQS5iSRQA?usp=drive_link"
+     },
+     {
+       "name": "Extract Data from PDFs",
+       "category": "Extract Data from PDFs Example Build",
+       "description": "Extract Data from PDFs Example Build",
+       "image": "extract_data_from_pdfs.jpeg",
+       "downloadLink": "https://drive.google.com/drive/folders/1IzvAaWhOpt_Uax_j-4JlXyD2JcCJChez?usp=drive_link"
+     },
+     {
+       "name": "Generate Content Ideas from call",
+       "category": "Generate Content Ideas from call",
+       "description": "Generate Content Ideas from call",
+       "image": "generate_content_ideas_from_call.png",
+       "downloadLink": "https://drive.google.com/drive/folders/11pmOy4rTdroymFx3mhzmxTVFoVvGVzZT?usp=drive_link"
+     },
+     {
+       "name": "Lead Magnet Generator",
+       "category": "Lead Magnet Generator",
+       "description": "Lead Magnet Generator",
+       "image": "lead_magnet_automation.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1vP3Rshtz9pMtbDQsniT5od0fIhEagD7J?usp=drive_link"
+     },
+     {
+       "name": "Lead Follow Up",
+       "category": "Lead Follow Up",
+       "description": "Lead Follow Up",
+       "image": "lead_follow_up_system.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1P6feMNaUCwJhfHbwuwW0CReYz3rWTW6C?usp=drive_link"
+     },
+     {
+       "name": "Automating LinkedIn replies",
+       "category": "Automating LinkedIn replies",
+       "description": "Automating LinkedIn replies",
+       "image": "automating_linkedin_replies.png",
+       "downloadLink": "https://drive.google.com/drive/folders/14fwv0pVZLucx6eTwyddKvleRshhRgjQv?usp=drive_link"
+     },
+     {
+       "name": "Newsletters -> MP3",
+       "category": "Newsletters -> MP3",
+       "description": "Newsletters -> MP3",
+       "image": "newsletter_to_mp3.png",
+       "downloadLink": "https://drive.google.com/drive/folders/11tVk62L-zS_jPNwaf5DhII9NDK8L3FW7?usp=drive_link"
+     },
+     {
+       "name": "Meeting Discovery Info",
+       "category": "Meeting Discovery Info",
+       "description": "Meeting Discovery Info",
+       "image": "discovery_call_info.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1Irme8FeLi0jq0Nb6DT3To2opelJeqYJL?usp=drive_link"
+     },
+     {
+       "name": "Preparation Before Call",
+       "category": "Preparation Before Call",
+       "description": "Preparation Before Call",
+       "image": "preparation_before_call.png",
+       "downloadLink": "https://drive.google.com/drive/folders/15AimBB9Y9zCxr2IJP4TUu5knZC5zSD87?usp=drive_link"
+     },
+     {
+       "name": "Web Scrape",
+       "category": "Web Scrape",
+       "description": "Web Scrape",
+       "image": "web_scrape.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1k7A5qy1-ANnXYbIl_myPFDWiPhv4oR0o?usp=drive_link"
+     },
+     {
+       "name": "Youtube → Content Generator",
+       "category": "Youtube → Content Generator",
+       "description": "Youtube → Content Generator",
+       "image": "youtube_content_generator.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1Fr1hoRXsowkTSYAF6sHV9MVWso3Rogrv?usp=drive_link"
+     },
+     {
+       "name": "AUTO COMMENT LINKEDIN",
+       "category": "Linkedin Comment Automation",
+       "description": "Linkedin Comment Automation",
+       "image": "auto_comment_linkedin.png",
+       "downloadLink": ""
+     },
+     {
+       "name": "RSS Feed To Social Media",
+       "category": "create viral social media content",
+       "description": "This automation creates viral social media posts in seconds by pulling content from an RSS feed, parsing it, generating tailored posts with Anthropic Claude, enhancing them with OpenAI tools, and distributing to multiple platforms like X, LinkedIn, Instagram, and Facebook.",
+       "image": "rss_feed_to_social_media.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1LMfGngZ4YnYdg8xo9YBwVUUho68eGyrQ?usp=drive_link"
+     },
+     {
+       "name": "email scraper",
+       "category": "email scraper |",
+       "description": "This system scrapes thousands of hyper-qualified B2B leads by gathering data from multiple platforms, filtering key details, generating AI summaries, formatting the results, and storing them in Google Sheets for easy access.",
+       "image": "email_scraper.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1jfj0sCz3LrfAFHkhCArl4QK7uhqleoMD?usp=drive_link"
+     },
+     {
+       "name": "Auto content generator 7/10",
+       "category": "Auto content generator",
+       "description": "This automation transforms your content ideas into engaging social media posts by generating captivating captions with ChatGPT, creating eye-catching graphics with DALL·E 3, saving everything to Google Sheets, and allowing for easy posting or bulk content creation with Canva.",
+       "image": "auto_content_generator_7_10.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1DWX0aqPndh_oiMCmaikaG9XctOuTmURj?usp=drive_link"
+     },
+     {
+       "name": "Proposal Generator",
+       "category": "Proposal Generator",
+       "description": "This automation streamlines proposal generation by allowing you to fill out a simple form, which then uses ChatGPT to create a tailored proposal as a Google Doc, complete with client-specific details, and automatically emails it to the client—all in just one minute!",
+       "image": "proposal_generator.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1p1xenCY0XfcF9DFR-TmIiXMOZ2V1JFQt?usp=drive_link"
+     },
+     {
+       "name": "Demo - Slack AI Assistant",
+       "category": "Creating Invoices",
+       "description": "Demo - Slack AI Assistant - Creating Invoices",
+       "image": "demo_slack_ai_assistant.png",
+       "downloadLink": "https://drive.google.com/drive/folders/13Uonm4nNTjpX4FmUkMQ54DJgqahD-evm?usp=drive_link"
+     },
+     {
+       "name": "Ecommerce Product Data Scraper (Part 1)",
+       "category": "Ecommerce Product Data Scraper",
+       "description": "Ecommerce Product Data Scraper",
+       "image": "ecommerce_product_data_scraper_part_1.png",
+       "downloadLink": "https://drive.google.com/file/d/1eDzclZCRlfFExczaEMFkkmJfxEuVySMb/view?usp=drive_link"
+     },
+     {
+       "name": "Ecommerce Product Data Scraper (Part 2)",
+       "category": "Ecommerce Product Data Scraper",
+       "description": "Ecommerce Product Data Scraper",
+       "image": "ecommerce_product_data_scraper_part_1.png",
+       "downloadLink": "https://drive.google.com/file/d/15ACYYTW8nJZRIEhSLnpnE2xqR-yoH88d/view?usp=drive_link"
+     },
+     {
+       "name": "AI Blog Assistant",
+       "category": "AI Blog Assistant",
+       "description": "AI Blog Assistant",
+       "image": "ai_blog_assistant.png",
+       "downloadLink": "https://drive.google.com/drive/folders/18_d6aGLR94vsHvT2OyRTSD8ombDxoZfe?usp=drive_link"
+     },
+     {
+       "name": "AI Content Creation & Idea Expansion",
+       "category": "AI Content Creation & Idea Expansion",
+       "description": "AI Content Creation & Idea Expansion",
+       "image": "ai_content_creation_idea_expansion.png",
+       "downloadLink": "https://drive.google.com/drive/folders/19ggMZboa8c_TiUZSYCFIODO7Lt0AvC-b?usp=drive_link"
+     },
+     {
+       "name": "AI Meeting Preparation Notes",
+       "category": "AI Meeting Preparation",
+       "description": "AI Meeting Preparation Notes",
+       "image": "ai_meeting_preparation_notes.png",
+       "downloadLink": "https://drive.google.com/file/d/1MteanTWesvf7m2nrXyGOHEeNPJ3ddKUl/view?usp=drive_link"
+     },
+     {
+       "name": "Viral AI Content Scraper",
+       "category": "Viral AI Content Scraper",
+       "description": "Viral AI Content Scraper",
+       "image": "viral_ai_content_scraper.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1JyptXLxzG4iTgSAkNjG93dTNfUNwQQlG?usp=drive_link"
+     },
+     {
+       "name": "Slack AI - Staff Training & Product Manual Chatbot",
+       "category": "Slack AI - Staff Training & Product Manual Chatbot",
+       "description": "Slack AI - Staff Training & Product Manual Chatbot",
+       "image": "slack_ai_staff_training_product_manual_chatbot.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1AAEY8CEtri1vOHsSqWFVbHgJw9bT2ihK?usp=drive_link"
+     },
+     {
+       "name": "Slack Onboarding Command",
+       "category": "Slack Onboarding Command",
+       "description": "Slack Onboarding Command",
+       "image": "slack_onboarding_command.png",
+       "downloadLink": "https://drive.google.com/file/d/1V16S3tsxPiuVRvlUhaiPwlyCcce5WIXS/view?usp=drive_link"
+     },
+     {
+       "name": "Instagram AI Assistant",
+       "category": "Instagram AI Assistant",
+       "description": "Instagram AI Assistant",
+       "image": "instagram_ai_assistant.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1Vim8mzek1bKt98omLUvdkEjwhntwxB0Z?usp=drive_link"
+     },
+     {
+       "name": "Website Live Chat AI Assistant",
+       "category": "Website Live Chat AI Assistant",
+       "description": "Website Live Chat AI Assistant",
+       "image": "website_live_chat_ai_assistant.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1v5xAHBVB0_tw4FDMm6EcAJpmqLXiN9GU?usp=drive_link"
+     },
+     
+     {
+       "name": "BLOG GENERATOR COMPLEX",
+       "category": "BLOG GENERATOR COMPLEX",
+       "description": "BLOG GENERATOR COMPLEX” - Blog Generator",
+       "image": "blog_generator_complex.png",
+       "downloadLink": "https://drive.google.com/drive/folders/1p-Oi3nYhiAqi6kTcOAuvbpqE7QrzkXbt?usp=drive_link"
+     }
+    
+   ]
