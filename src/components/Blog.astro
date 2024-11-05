@@ -21,11 +21,45 @@ import templates from './templates.json' assert { type: 'json' };
       </p>
     </div>
     
-    <!-- Filters remain the same -->
-    <div class="mb-8 w-full flex gap-4">
-      <!-- Previous filter content -->
+    <!-- Search Bar -->
+    <div class="mb-8 w-full">
+      <div class="flex gap-2 max-w-md mx-auto">
+        <div class="relative flex-1">
+          <input 
+            type="text" 
+            id="searchInput"
+            placeholder="Search templates..."
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary darkcancel:bg-gray-700 darkcancel:border-gray-600 darkcancel:text-white"
+          />
+        </div>
+        <button 
+          id="searchButton"
+          class="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50"
+        >
+          Search
+        </button>
+      </div>
+      <!-- Show All Button -->
+      <div class="flex justify-center mt-4">
+        <button 
+          id="showAllButton"
+          class="hidden px-4 py-2 text-primary hover:text-gray-600 transition-colors focus:outline-none"
+        >
+          ← Show All Templates
+        </button>
+      </div>
     </div>
     
+    <!-- No Results Message -->
+    <div id="noResults" class="hidden text-center py-8">
+      <p class="text-gray-600 darkcancel:text-gray-300 mb-4">
+        Sorry, no template matches your search query.
+      </p>
+      <p class="text-gray-500 darkcancel:text-gray-400">
+        Try searching for: <span class="text-primary">Hubspot</span>, <span class="text-primary">Smartlead</span>, <span class="text-primary">Slack</span>, <span class="text-primary">Clay</span> or <span class="text-primary">onboarding</span>
+      </p>
+    </div>
+
     <div id="templateContainer" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {templates.map((template) => (
         <div 
@@ -33,6 +67,7 @@ import templates from './templates.json' assert { type: 'json' };
           data-category={template.category}
           data-template-link={template.downloadLink}
           data-template-name={template.name}
+          data-template-description={template.description}
         >
           <div class="relative overflow-hidden rounded-xl">
             <img 
@@ -59,21 +94,12 @@ import templates from './templates.json' assert { type: 'json' };
         </div>
       ))}
     </div>
-
-    <div class="mt-8 text-center" id="showMoreContainer">
-      <button
-        id="showMoreBtn"
-        class="hidden px-6 py-3 text-white bg-primary rounded-md hover:bg-primary/80 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50"
-      >
-        Show More
-      </button>
-    </div>
   </Container>
 </div>
 
 <!-- Email Modal -->
-<div id="emailModal" class="fixed inset-0 backdrop-blur-sm hidden bg-black/30 !mt-0  z-50 flex items-center justify-center">
-  <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-8 max-w-md w-full mx-4">
+<div id="emailModal" class="fixed inset-0 backdrop-blur-sm hidden bg-black/30 !mt-0 z-50 flex items-center justify-center">
+  <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-8 max-w-md w-full mx-4">
     <div id="modalContent">
       <h3 class="text-xl font-semibold mb-4">Download Template</h3>
       <form id="emailForm" class="space-y-4">
@@ -83,7 +109,7 @@ import templates from './templates.json' assert { type: 'json' };
             type="email"
             id="email"
             class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-            placeholder="your.name@company.com"
+            placeholder="your@work_email.com"
             required
           />
           <p id="emailError" class="text-red-500 text-sm mt-1 hidden"></p>
@@ -124,9 +150,10 @@ import templates from './templates.json' assert { type: 'json' };
 
   // Get DOM elements
   const searchInput = document.getElementById('searchInput') as HTMLInputElement;
-  const categoryFilter = document.getElementById('categoryFilter') as HTMLSelectElement;
+  const searchButton = document.getElementById('searchButton');
+  const showAllButton = document.getElementById('showAllButton');
   const templateContainer = document.getElementById('templateContainer');
-  const showMoreBtn = document.getElementById('showMoreBtn');
+  const noResults = document.getElementById('noResults');
   const emailModal = document.getElementById('emailModal');
   const emailForm = document.getElementById('emailForm') as HTMLFormElement;
   const emailInput = document.getElementById('email') as HTMLInputElement;
@@ -139,7 +166,47 @@ import templates from './templates.json' assert { type: 'json' };
     name: ''
   };
 
-  // Previous filtering logic remains the same...
+  // Filter templates function
+  function filterTemplates() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const templates = document.querySelectorAll('#templateContainer > div');
+    let hasResults = false;
+
+    // Toggle Show All button visibility
+    if (showAllButton) {
+      showAllButton.style.display = searchTerm ? 'block' : 'none';
+    }
+
+    templates.forEach((template) => {
+      const templateElement = template as HTMLElement;
+      const name = templateElement.dataset.templateName?.toLowerCase() || '';
+      const description = templateElement.dataset.templateDescription?.toLowerCase() || '';
+      const category = templateElement.dataset.category?.toLowerCase() || '';
+      
+      // Search in name, description, and category
+      const matchesSearch = 
+        name.includes(searchTerm) || 
+        description.includes(searchTerm) || 
+        category.includes(searchTerm);
+
+      templateElement.style.display = matchesSearch ? '' : 'none';
+      if (matchesSearch) hasResults = true;
+    });
+
+    // Show/hide no results message
+    if (noResults) {
+      noResults.style.display = hasResults || !searchTerm ? 'none' : 'block';
+      templateContainer!.style.display = hasResults || !searchTerm ? 'grid' : 'none';
+    }
+  }
+
+  // Show all templates function
+  function showAllTemplates() {
+    if (searchInput) {
+      searchInput.value = '';
+    }
+    filterTemplates();
+  }
 
   // Email validation function
   function validateEmail(email: string): string {
@@ -203,7 +270,7 @@ import templates from './templates.json' assert { type: 'json' };
     if (emailError) emailError.classList.add('hidden');
 
     try {
-      const response = await fetch(`https://n8n.zspirelabs.com/webhook/d1eb7a1d-5f5d-43b2-a455-752ce5c4caf2/${currentTemplate.link}`, {
+      const response = await fetch(`https://n8n.zspirelabs.com/webhook/send-drive-link/${currentTemplate.link}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -230,6 +297,16 @@ import templates from './templates.json' assert { type: 'json' };
     }
   });
 
+  // Add event listeners for search
+  searchButton?.addEventListener('click', filterTemplates);
+  showAllButton?.addEventListener('click', showAllTemplates);
+  
+  searchInput?.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+      filterTemplates();
+    }
+  });
+
   // Close modal handlers
   closeModalBtn?.addEventListener('click', hideModal);
   
@@ -246,5 +323,8 @@ import templates from './templates.json' assert { type: 'json' };
     }
   });
 
-  // Previous event listeners and initial filter remain the same...
+  // Initial setup
+  document.addEventListener('DOMContentLoaded', () => {
+    filterTemplates();
+  });
 </script>
