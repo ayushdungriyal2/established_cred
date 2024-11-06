@@ -34,10 +34,10 @@ import CallToAction from "../components/CallToAction.astro"
             <div class="flex items-center gap-6">
               
               <div class=" hover:grayscale-0 transition-all hover:opacity-100">
-                <img src="/public/images/outlook.webp" alt="Outlook" class="h-8" />
+                <img src="/images/outlook.webp" alt="Outlook" class="h-8" />
               </div>
               <div class="   hover:grayscale-0 transition-all  hover:opacity-100">
-                <img src="/public/images/gmail.webp" alt="Google Workspace" class="h-7" />
+                <img src="/images/gmail.webp" alt="Google Workspace" class="h-7" />
               </div>
             </div>
           </div>
@@ -246,7 +246,7 @@ import CallToAction from "../components/CallToAction.astro"
     </Container>
   </div>
   <!-- Savings Calculator -->
-  <div class="py-24 " id="calculator">
+  <div class="py-24" id="calculator">
     <Container>
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-12">
@@ -256,16 +256,18 @@ import CallToAction from "../components/CallToAction.astro"
 
         <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
           <div class="space-y-8">
-            <div>
+            <div class="max-w-xs mx-auto">
               <label class="block text-sm font-medium text-gray-700 mb-2">
-                Number of Inboxes Needed
+                Number of Inboxes Needed (max 1000)
               </label>
               <input 
                 type="number" 
                 id="inboxCount"
                 min="1"
+                max="1000"
                 value="10"
-                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary"
+                oninput="this.value = Math.min(Math.max(this.value, 1), 1000)"
+                class="w-48 px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary text-center"
               />
             </div>
 
@@ -288,6 +290,53 @@ import CallToAction from "../components/CallToAction.astro"
       </div>
     </Container>
   </div>
+
+<script>
+// Enhanced calculator functionality with limit enforcement
+const inboxInput = document.getElementById('inboxCount') as HTMLInputElement;
+const competitorCostEl = document.getElementById('competitorCost');
+const ourCostEl = document.getElementById('ourCost');
+const savingsDisplay = document.getElementById('savingsAmount');
+
+const COMPETITOR_PRICE = 5; // $5 per inbox
+const OUR_PRICE = 2; // $2 per inbox
+const MAX_INBOXES = 1000;
+
+function calculateCosts() {
+  // Enforce limits
+  let inboxes = parseInt(inboxInput.value) || 0;
+  inboxes = Math.min(Math.max(inboxes, 1), MAX_INBOXES);
+  inboxInput.value = inboxes.toString(); // Update input if value was clamped
+  
+  // Calculate yearly costs
+  const competitorYearly = inboxes * COMPETITOR_PRICE * 12;
+  const ourYearly = inboxes * OUR_PRICE * 12;
+  const savings = competitorYearly - ourYearly;
+  
+  // Update display
+  if (competitorCostEl) {
+    competitorCostEl.textContent = `$${competitorYearly.toLocaleString()}/year`;
+  }
+  
+  if (ourCostEl) {
+    ourCostEl.textContent = `$${ourYearly.toLocaleString()}/year`;
+  }
+  
+  if (savingsDisplay) {
+    savingsDisplay.textContent = `$${savings.toLocaleString()}/year`;
+  }
+
+  // Add animation class for emphasis
+  savingsDisplay?.classList.add('highlight');
+  setTimeout(() => {
+    savingsDisplay?.classList.remove('highlight');
+  }, 200);
+}
+
+// Add event listeners
+inboxInput?.addEventListener('input', calculateCosts);
+document.addEventListener('DOMContentLoaded', calculateCosts);
+</script>
 
   <!-- CTA Section -->
   <div class="h-20">
