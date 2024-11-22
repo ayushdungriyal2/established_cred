@@ -1,0 +1,112 @@
+---
+import Container from "./Container.astro"
+---
+
+<section id="process" class=" pb-16 bg-gradient-to-b darkcancelfrom-gray-900 darkcancelto-gray-800">
+  <Container>
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <div class="inline-flex items-center justify-center p-2 bg-secondary/10 rounded-full mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
+          <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      
+      <h2 class="text-3xl font-bold text-gray-700 darkcanceltext-white mb-3">
+        Our Proven Process
+      </h2>
+      <p class="text-gray-600 darkcanceltext-gray-300">
+        A systematic approach to scaling your partnerships and growth. We've refined our process to ensure maximum impact with minimum friction.
+      </p>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      {/* Timeline Line */}
+      <div class="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-secondary/20" />
+
+      {/* Steps */}
+      <div class="relative space-y-8 md:space-y-12">
+        {[
+          {
+            title: "Discovery",
+            icon: (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            ),
+            description: "Understanding your goals, target audience, and current partnerships landscape",
+            features: ["Goals Analysis", "Market Research"]
+          },
+          {
+            title: "Strategy",
+            icon: (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            ),
+            description: "Developing a tailored partnership strategy aligned with your objectives",
+            features: ["Partner Identification", "Outreach Planning"]
+          },
+          {
+            title: "Execution",
+            icon: (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            ),
+            description: "Implementing the strategy with precision and continuous optimization",
+            features: ["Partner Outreach", "Deal Negotiation"]
+          },
+          {
+            title: "Growth",
+            icon: (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            ),
+            description: "Scaling successful partnerships and measuring impact",
+            features: ["Performance Tracking", "Continuous Optimization"]
+          }
+        ].map((step, index) => (
+          <div class={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8`}>
+            {/* Timeline Dot */}
+            <div class="absolute left-4 md:left-1/2 w-8 h-8 -translate-x-1/2 rounded-full bg-white border-2 border-secondary flex items-center justify-center">
+              <span class="text-sm font-bold text-secondary">0{index + 1}</span>
+            </div>
+
+            {/* Content Card */}
+            <div class={`relative ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
+              <div class="group">
+                <div class="relative overflow-hidden rounded-xl bg-white darkcancelbg-gray-800 border border-gray-100 darkcancelborder-gray-700 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+                  {/* Gradient Bar Top */}
+                  <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary/40 to-secondary"></div>
+                  
+                  <div class="p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                      <div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+                        {step.icon}
+                      </div>
+                      <h3 class="text-lg font-semibold text-gray-700 darkcanceltext-white">{step.title}</h3>
+                    </div>
+
+                    <p class="text-sm text-gray-600 darkcanceltext-gray-300 mb-4">{step.description}</p>
+
+                    <div class="space-y-2">
+                      {step.features.map((feature) => (
+                        <div class="flex items-center gap-2 text-sm text-gray-600 darkcanceltext-gray-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-secondary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Container>
+</section>

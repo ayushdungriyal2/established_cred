@@ -1,74 +1,286 @@
 ---
-import Container from "./Container.astro"
+import Container from "../components/Container.astro";
 
+const metrics = [
+    {
+        title: "Press Release Performance",
+        value: "2.4M",
+        label: "Total Media Reach",
+        className: "col-span-1 md:col-span-2 h-full",
+        stats: [
+            {
+                title: "Media Pickups",
+                value: "85+",
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-.586-1.414l-3.5-3.5A2 2 0 0012.5 4m7.5 16h-12a2 2 0 01-2-2V6"></path></svg>`,
+                publications: ["TechCrunch", "Forbes", "Reuters"]
+            },
+            {
+                title: "Syndications",
+                value: "240+",
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>`,
+                breakdown: "180 Tier 1 | 60 Industry"
+            },
+            {
+                title: "Coverage Quality",
+                value: "92%",
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`,
+                detail: "Positive Sentiment"
+            }
+        ]
+    }
+];
 ---
 
-<div class="relative" id="home">
-    <!-- <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 darkcancelopacity-20">
-        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 darkcancelfrom-blue-700"></div>
-        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 darkcancelto-indigo-600"></div>
-    </div> -->
-    <Container>
+<div class="relative overflow-hidden font-sans" id="home">
+    <div class="relative min-h-[60vh] md:min-h-[80vh]" style="background: linear-gradient(145deg, #252E40 10%, #404E6B 45%, #252E40 100%);">
+        <Container>
+            <div class="relative pt-20 md:pt-48">
+                <div class="text-center mx-auto px-4 md:px-0">
+                    <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold mb-6">
+                        <span class="text-white leading-tight">Guaranteed Coverage On Top-Tier <br class="hidden md:block">Media for More </span>
+                        <span class="inline-flex">
+                            <span class="text-blue-200" id="typed-word"></span>
+                        </span>
+                    </h1>
+                    
+                    <p class="text-blue-100 text-base md:text-lg mb-8 md:mb-10 max-w-2xl mx-auto">
+                        Strategic media placements that elevate your brand's presence and authority
+                    </p>
 
-        <div class="relative pt-36 ml-auto">
-            <div class="lg:w-2/3 text-center mx-auto">
-                <h1 class="text-gray-900 font-bold text-5xl md:text-6xl xl:text-7xl">Automations For <span class="text-primary ">Forward Thinking SDRs.</span></h1>
-                <p class="mt-8 text-gray-600 ">Streamline your operations with AI-driven automation. We focus on helping companies save time, improve efficiency, and simplify reporting, allowing you to dedicate your efforts to what matters most.</p>
-                <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                    <a
-                      href="https://calendly.com/ayushdungriyal2/intro-call"
-                      class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-                    >
-                      <span class="relative text-base font-semibold text-white"
-                        >Book A Free Consultation</span
-                      >
-                    </a>
-                    <a
-                      href="#templates"
-                      class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 darkcancelbefore:border-gray-700 darkcancelbefore:bg-gray-800 sm:w-max"
-                    >
-                      <span
-                        class="relative text-base font-semibold text-primary darkcanceltext-white"
-                        >Get 100+ Free Templates</span
-                      >
-                    </a>
+                    <div class="flex justify-center gap-4 mb-8 md:mb-10">
+                        <button class="bg-white px-6 md:px-8 py-2 md:py-3 rounded-lg font-medium hover:bg-blue-50 transition-all shadow-sm text-sm md:text-base">
+                            Get Your PR Strategy
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
+                        <div class="flex gap-1">
+                            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/techcrunch_logo_icon_170624.png" alt="TechCrunch" class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-white p-1 shadow-sm" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Forbes_circle.png" alt="Forbes" class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-white p-1 shadow-sm" />
+                        </div>
+                        <div class="hidden md:block h-8 w-px bg-blue-400/30"></div>
+                        <div class="flex items-center gap-2 text-blue-100 text-sm md:text-base">
+                            <span>⭐⭐⭐⭐⭐ Reviews</span>
+                        </div>
+                        <div class="hidden md:block h-8 w-px bg-blue-400/30"></div>
+                        <div class="flex items-center gap-2 text-blue-100 text-sm md:text-base">
+                            <span>100M+ Reach</span>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="hidden py-8 mt-16 border-y border-gray-100 darkcancelborder-gray-800 sm:flex justify-between">
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 darkcanceltext-white">The lowest price</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
+            </div>
+        </Container>
+    </div>
+
+    <Container>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mt-8 lg:mt-[-4rem] relative z-10 px-4 md:px-6 lg:px-0">
+            <div class="group bg-white rounded-xl p-4 md:p-5 hover:bg-gray-50 transition-all border border-slate-200 shadow-lg col-span-1 md:col-span-2 w-full">
+                <div class="space-y-3 md:space-y-4">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+                        <div>
+                            <h3 class="text-base md:text-lg font-medium text-slate-800">Brand Authority Uplift</h3>
+                            <p class="text-xs md:text-sm text-slate-500">Overall Brand Growth</p>
+                        </div>
+                        <!-- <div class="flex items-center gap-3 mt-2 md:mt-0">
+                            <span class="text-xs text-slate-500">Total Reach</span>
+                            <span class="text-lg md:text-xl font-bold text-green-600">100M+</span>
+                        </div> -->
                     </div>
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 darkcanceltext-white">The fastest on the market</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        <div class="bg-slate-50 rounded-xl p-3 w-full">
+                            <div class="flex items-center gap-2 mb-2">
+                                <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                                <span class="text-sm text-slate-600">Organic Traffic</span>
+                            </div>
+                            <div class="text-xl md:text-2xl font-bold text-slate-800 mb-1">+165%</div>
+                            <div class="text-xs text-slate-500">Growth in search engine traffic</div>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-xl p-3 w-full">
+                            <div class="flex items-center gap-2 mb-2">
+                                <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                                <span class="text-sm text-slate-600">Referral Traffic</span>
+                            </div>
+                            <div class="text-xl md:text-2xl font-bold text-slate-800 mb-1">+156%</div>
+                            <div class="text-xs text-slate-500">Media placement visitors</div>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-xl p-3 w-full">
+                            <div class="flex items-center gap-2 mb-2">
+                                <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <span class="text-sm text-slate-600">Brand Searches</span>
+                            </div>
+                            <div class="text-xl md:text-2xl font-bold text-slate-800 mb-1">+178%</div>
+                            <div class="text-xs text-slate-500">Brand query growth</div>
+                        </div>
                     </div>
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 darkcanceltext-white">The most loved</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
+
+                    <div class="bg-slate-50 rounded-xl p-3 md:p-4 w-full">
+                        <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-3">
+                            <h4 class="text-sm md:text-base font-medium text-slate-700">Top Publication Performance</h4>
+                            <span class="text-xs text-slate-500 mt-1 md:mt-0">Last 30 days</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                            {[
+                                { name: "TechCrunch", articles: "12", reach: "3.2M" },
+                                { name: "Forbes", articles: "8", reach: "2.8M" },
+                                { name: "Reuters", articles: "7", reach: "2.1M" },
+                                { name: "VentureBeat", articles: "6", reach: "1.8M" },
+                                { name: "Bloomberg", articles: "5", reach: "1.6M" },
+                                { name: "WSJ", articles: "4", reach: "1.4M" }
+                            ].map(pub => (
+                                <div class="flex items-center justify-between bg-white rounded-lg p-2 w-full">
+                                    <div class="flex flex-col">
+                                        <span class="text-xs font-medium text-slate-700">{pub.name}</span>
+                                        <span class="text-[10px] text-slate-500">{pub.articles} articles</span>
+                                    </div>
+                                    <span class="text-xs font-semibold text-blue-600">{pub.reach}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div> -->
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-4 md:p-5 hover:bg-gray-50 transition-all border border-slate-200 shadow-lg w-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-base md:text-lg font-medium text-slate-800">Campaign Performance</h3>
+                </div>
+                <div class="flex-1 flex flex-col space-y-3">
+                    {[
+                        { label: "Product Launch", reached: "4.2M", target: "5M" },
+                        { label: "Funding News", reached: "3.8M", target: "4.5M" },
+                        { label: "Industry Report", reached: "2.1M", target: "3M" },
+                        { label: "Thought Leader Feature", reached: "1.8M", target: "2.5M" },
+                        { label: "Partnership PR", reached: "1.2M", target: "2M" }
+                    ].map(campaign => (
+                        <div class="relative w-full">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-slate-600">{campaign.label}</span>
+                            </div>
+                            <div class="flex justify-between text-xs mb-1.5">
+                                <span class="text-slate-500">Target: {campaign.target}</span>
+                                <span class="font-medium text-blue-600">{campaign.reached} reached</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style={`width: ${(parseFloat(campaign.reached.replace('M', '')) / parseFloat(campaign.target.replace('M', '')) * 100)}%`}></div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 bg-white rounded-xl p-4 md:p-5 hover:bg-gray-50 transition-all border border-slate-200 shadow-lg w-full">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                <div>
+                    <h3 class="text-base md:text-lg font-medium text-slate-800">Cross-Channel Impact</h3>
+                    <p class="text-xs md:text-sm text-slate-500">PR Performance Metrics</p>
+                </div>
+                <span class="text-sm font-medium px-2 py-1 bg-green-100 text-green-600 rounded-full mt-2 md:mt-0">
+                    Trending Up
+                </span>
             </div>
             
-            <!-- <div class="mt-24 mb-[-80px] grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
-                <div class="p-4 grayscale-0 transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/make.png" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                  </div>
-                <div class="p-4 grayscale-0 transition duration-200 hover:grayscale-0">
-                  <img src="./images/clients/hubspot.png" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                </div>
-                <div class="p-4 flex grayscale-0 transition duration-200 hover:grayscale-0">
-                  <img src="./images/clients/clay.png" class="h-9 w-auto m-auto" loading="lazy" alt="client logo" width="" height="" />
-                </div>
-                <div class="p-4 grayscale-0 transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/at.png" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                  </div>
-                  <div class="p-4 flex grayscale-0 transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/Zapire.png" class="h-8 w-auto m-auto" loading="lazy" alt="client logo" width="" height="" />
-                  </div>
-                <div class="p-4 grayscale-0 transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/customcode.png" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                </div>
-              </div> -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                {[
+                    { 
+                        label: "Channel Growth", 
+                        value: "+172%",
+                        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>`
+                    },
+                    { 
+                        label: "Earned Media Traffic",
+                        value: "+185%",
+                        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>`
+                    },
+                    {
+                        label: "Media CTR",
+                        value: "+174%",
+                        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"></path>
+                        </svg>`
+                    },
+                    {
+                        label: "Brand Mentions",
+                        value: "+170%",
+                        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                        </svg>`
+                    },
+                    {
+                        label: "Coverage Reach",
+                        value: "14.2M",
+                        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                        </svg>`
+                    }
+                ].map((item) => (
+                    <div class="bg-slate-50 rounded-lg p-3 flex flex-col items-center text-center h-full justify-between w-full">
+                        <div class="text-blue-500 mb-3" set:html={item.icon} />
+                        <div class="space-y-1 flex flex-col justify-center flex-1">
+                            <div class="text-xs text-slate-600">{item.label}</div>
+                            <div class="flex flex-col items-center gap-1">
+                                <span class="text-lg font-semibold text-slate-800">{item.value}</span>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     </Container>
 </div>
+
+<style>
+    .cursor {
+        animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+</style>
+
+<script>
+    const words = ["Authority", "Conversions", "Visibility", "Trust", "Thought Leadership"];
+    const typedWord = document.getElementById("typed-word");
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            typedWord.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedWord.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            setTimeout(() => isDeleting = true, 1000);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+
+        const typingSpeed = isDeleting ? 50 : 100;
+        setTimeout(type, typingSpeed);
+    }
+
+    document.addEventListener('DOMContentLoaded', type);
+</script>

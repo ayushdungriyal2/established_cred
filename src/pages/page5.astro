@@ -1,0 +1,342 @@
+---
+import Container from "../components/Container.astro";
+
+const metrics = [
+    {
+        title: "Press Release Performance",
+        value: "2.4M",
+        label: "Total Media Reach",
+        className: "col-span-2 h-full",
+        stats: [
+            {
+                title: "Media Pickups",
+                value: "85+",
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-.586-1.414l-3.5-3.5A2 2 0 0012.5 4m7.5 16h-12a2 2 0 01-2-2V6"></path></svg>`,
+                publications: ["TechCrunch", "Forbes", "Reuters"]
+            },
+            {
+                title: "Syndications",
+                value: "240+",
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>`,
+                breakdown: "180 Tier 1 | 60 Industry"
+            },
+            {
+                title: "Coverage Quality",
+                value: "92%",
+                icon: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`,
+                detail: "Positive Sentiment"
+            }
+        ]
+    },
+    {
+        title: "Media Coverage",
+        value: "32",
+        label: "Featured Stories",
+        className: "h-full",
+        publications: [
+            { name: "Forbes", value: "12" },
+            { name: "TechCrunch", value: "8" },
+            { name: "WSJ", value: "6" },
+            { name: "Reuters", value: "4" },
+            { name: "Bloomberg", value: "2" }
+        ]
+    },
+    {
+        title: "Digital Impact",
+        value: "168%",
+        label: "Increase in Share of Voice",
+        className: "h-full",
+        metrics: [
+            { label: "Backlinks", value: "840+" },
+            { label: "Domain Authority", value: "85/100" },
+            { label: "Social Shares", value: "12.4k" }
+        ]
+    },
+    {
+        title: "Brand Visibility",
+        value: "14M",
+        label: "Potential Reach",
+        className: "h-full",
+        insights: [
+            { label: "News Sites", value: "5.2M" },
+            { label: "Social Media", value: "6.8M" },
+            { label: "Industry Portals", value: "2M" }
+        ]
+    },
+    {
+        title: "Campaign ROI",
+        value: "12x",
+        label: "Return on PR Spend",
+        className: "h-full",
+        highlights: [
+            { label: "AVE", value: "$1.2M" },
+            { label: "Media Value", value: "$2.4M" },
+            { label: "Cost per Mention", value: "$840" }
+        ]
+    }
+];
+---
+
+<div class="relative overflow-hidden font-sans" id="home">
+    <div class="relative min-h-[80vh]" style="background: linear-gradient(145deg, #252E40 10%, #404E6B 45%, #252E40 100%);">
+        <Container>
+            <div class="relative pt-48">
+                <div class="text-center mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        <span class="text-white leading-10">Guaranteed Coverage On Top-Tier <br>Media for More </span>
+                        <span class="inline-flex">
+                            <span class="text-blue-200" id="typed-word"></span>
+                            <!-- <span class="inline-block w-0.5 h-12 mt-1 ml-1 bg-blue-200 cursor" id="cursor"></span> -->
+                        </span>
+                    </h1>
+                    
+                    <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">
+                        Strategic media placements that elevate your brand's presence and authority
+                    </p>
+
+                    <div class="flex justify-center gap-4 mb-10">
+                        <button class="bg-white px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-all shadow-sm">
+                            Get Your PR Strategy
+                        </button>
+                    </div>
+
+                    <div class="flex justify-center items-center gap-6">
+                        <div class="flex gap-1">
+                            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/techcrunch_logo_icon_170624.png" alt="TechCrunch" class="w-10 h-10 rounded-lg bg-white p-1 shadow-sm" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Forbes_circle.png" alt="Forbes" class="w-10 h-10 rounded-lg bg-white p-1 shadow-sm" />
+                          <span class="flex rounded-lg align-middle  bg-white h-10">  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Inc._magazine_logo.png" alt="Forbes" class="w-10 h-9 rounded-lg bg-white p-1 shadow-sm" />
+                          </span>
+                        </div>
+                        <div class="h-8 w-px bg-blue-400/30"></div>
+                        <div class="flex items-center gap-2 text-blue-100">
+                            <span>85+ Media Pickups</span>
+                        </div>
+                        <div class="h-8 w-px bg-blue-400/30"></div>
+                        <div class="flex items-center gap-2 text-blue-100">
+                            <span>14M+ Reach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Container>
+    </div>
+
+    <Container>
+        <div class="grid pb-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mt-4 lg:mt-[-7rem] relative z-10 px-4 md:px-6 lg:px-0">
+            {/* Brand Authority Uplift - Spans 2 columns */}
+            <div class="group bg-white rounded-xl p-4 md:p-5 hover:bg-gray-50 transition-all flex flex-col border border-slate-200 shadow-lg col-span-1 md:col-span-2">
+                <div class="space-y-3 md:space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-base md:text-lg font-medium text-slate-800">Brand Authority Uplift</h3>
+                            <p class="text-xs md:text-sm text-slate-500">Overall Brand Growth</p>
+                        </div>
+                        <span class="text-xl md:text-xl font-bold text-green-600">+147%</span>
+                    </div>
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3">
+                        <div class="bg-slate-50 rounded-xl p-2 md:p-3">
+                            <div class="flex items-center gap-1.5 md:gap-2 mb-1.5 md:mb-2">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                                <span class="text-xs md:text-sm text-slate-600">Organic Traffic</span>
+                            </div>
+                            <div class="text-lg md:text-2xl font-bold text-slate-800 mb-1">+165%</div>
+                            <div class="text-[10px] md:text-xs text-slate-500">Growth in search engine traffic</div>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-xl p-2 md:p-3">
+                            <div class="flex items-center gap-1.5 md:gap-2 mb-1.5 md:mb-2">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"></path>
+                                </svg>
+                                <span class="text-xs md:text-sm text-slate-600">Direct Traffic</span>
+                            </div>
+                            <div class="text-lg md:text-2xl font-bold text-slate-800 mb-1">+142%</div>
+                            <div class="text-[10px] md:text-xs text-slate-500">Direct URL visitors</div>
+                        </div>
+    
+                        <div class="bg-slate-50 rounded-xl p-2 md:p-3">
+                            <div class="flex items-center gap-1.5 md:gap-2 mb-1.5 md:mb-2">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                                <span class="text-xs md:text-sm text-slate-600">Referral Traffic</span>
+                            </div>
+                            <div class="text-lg md:text-2xl font-bold text-slate-800 mb-1">+156%</div>
+                            <div class="text-[10px] md:text-xs text-slate-500">Media placement visitors</div>
+                        </div>
+    
+                        <div class="bg-slate-50 rounded-xl p-2 md:p-3">
+                            <div class="flex items-center gap-1.5 md:gap-2 mb-1.5 md:mb-2">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <span class="text-xs md:text-sm text-slate-600">Brand Searches</span>
+                            </div>
+                            <div class="text-lg md:text-2xl font-bold text-slate-800 mb-1">+178%</div>
+                            <div class="text-[10px] md:text-xs text-slate-500">Brand query growth</div>
+                        </div>
+    
+                        <div class="bg-slate-50 rounded-xl p-2 md:p-3">
+                            <div class="flex items-center gap-1.5 md:gap-2 mb-1.5 md:mb-2">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-xs md:text-sm text-slate-600">Geographic</span>
+                            </div>
+                            <div class="text-lg md:text-2xl font-bold text-slate-800 mb-1">+134%</div>
+                            <div class="text-[10px] md:text-xs text-slate-500">Regional expansion</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            {/* Digital Presence Card */}
+            <!-- <div class="bg-white rounded-xl p-4 md:p-5 hover:bg-gray-50 transition-all flex flex-col border border-slate-200 shadow-lg">
+                <div class="flex justify-between items-center mb-3 md:mb-4">
+                    <div>
+                        <h3 class="text-base md:text-lg font-medium text-slate-800">Digital Presence</h3>
+                        <p class="text-xs md:text-sm text-slate-500">Amplification Growth</p>
+                    </div>
+                    <div class="text-xl md:text-xl font-bold text-green-600">+185%</div>
+                </div>
+                <div class="space-y-2 md:space-y-3">
+                    {[
+                        { label: "Domain Authority", value: "192%" },
+                        { label: "High-Quality Backlinks", value: "845+" },
+                        { label: "Featured Snippets", value: "168%" },
+                        { label: "SEO Keywords", value: "175%" },
+                        { label: "Search Voice Share", value: "190%" }
+                    ].map(item => (
+                        <div class="bg-slate-50 rounded-lg p-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs md:text-sm text-slate-600">{item.label}</span>
+                                <span class="text-xs md:text-sm font-semibold text-green-600">+{item.value}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div> -->
+    
+            {/* Brand Coverage Card */}
+            <div class="bg-white rounded-xl p-4 md:p-5 hover:bg-gray-50 transition-all flex flex-col border border-slate-200 shadow-lg">
+                <div class="flex justify-between items-center mb-3 md:mb-4">
+                    <div>
+                        <h3 class="text-base md:text-lg font-medium text-slate-800">Brand Coverage</h3>
+                        <p class="text-xs md:text-sm text-slate-500">Coverage Uplift</p>
+                    </div>
+                    <div class="text-xl md:text-xl font-bold text-green-600">+164%</div>
+                </div>
+                <div class="space-y-2 md:space-y-3">
+                    {[
+                        { label: "Media Mentions", value: "175%" },
+                        { label: "Tier 1 Placements", value: "156%" },
+                        { label: "Positive Sentiment", value: "92%" },
+                        { label: "Coverage Reach", value: "14.2M" },
+                        { label: "Feature Quality", value: "167%" }
+                    ].map(item => (
+                        <div class="flex items-center justify-between p-2 bg-slate-50 rounded-lg">
+                            <span class="text-xs md:text-sm text-slate-600">{item.label}</span>
+                            <span class="text-xs md:text-sm font-semibold text-green-600">+{item.value}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+    
+            {/* Brand Interaction Card */}
+            <!-- <div class="bg-white rounded-xl p-4 md:p-5 hover:bg-gray-50 transition-all flex flex-col border border-slate-200 shadow-lg">
+                <div class="flex justify-between items-center mb-3 md:mb-4">
+                    <div>
+                        <h3 class="text-base md:text-lg font-medium text-slate-800">Brand Interaction</h3>
+                        <p class="text-xs md:text-sm text-slate-500">Engagement Boost</p>
+                    </div>
+                    <div class="text-xl md:text-xl font-bold text-green-600">+158%</div>
+                </div>
+                <div class="space-y-2 md:space-y-3">
+                    {[
+                        { label: "Session Duration", value: "145%" },
+                        { label: "Bounce Rate Reduction", value: "-42%" },
+                        { label: "Pages per Session", value: "168%" },
+                        { label: "Lead Submissions", value: "182%" },
+                        { label: "Landing Page Conversions", value: "155%" }
+                    ].map(item => (
+                        <div class="flex items-center justify-between p-2 bg-slate-50 rounded-lg">
+                            <span class="text-xs md:text-sm text-slate-600">{item.label}</span>
+                            <span class="text-xs md:text-sm font-semibold text-slate-800">{item.value}</span>
+                        </div>
+                    ))}
+                </div>
+            </div> -->
+    
+            {/* Cross-Channel Impact Card */}
+            <div class="bg-white rounded-xl p-4 md:p-5 hover:bg-gray-50 transition-all flex flex-col border border-slate-200 shadow-lg">
+                <div class="flex justify-between items-center mb-3 md:mb-4">
+                    <div>
+                        <h3 class="text-base md:text-lg font-medium text-slate-800">Cross-Channel Impact</h3>
+                        <p class="text-xs md:text-sm text-slate-500">Channel Growth</p>
+                    </div>
+                    <div class="text-xl md:text-xl font-bold text-green-600">+172%</div>
+                </div>
+                <div class="space-y-2 md:space-y-3">
+                    {[
+                        { label: "Earned Media Traffic", value: "185%" },
+                        { label: "New Visitor Growth", value: "165%" },
+                        { label: "Media CTR", value: "174%" },
+                        { label: "Social Share of Voice", value: "164%" },
+                        { label: "Brand Mentions", value: "170%" }
+                    ].map(item => (
+                        <div class="flex items-center justify-between p-2 bg-slate-50 rounded-lg">
+                            <span class="text-xs md:text-sm text-slate-600">{item.label}</span>
+                            <span class="text-xs md:text-sm font-semibold text-green-600">+{item.value}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </Container>
+</div>
+
+<style>
+    .cursor {
+        animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+</style>
+
+<script>
+    const words = ["Authority", "Conversions", "Visibility", "Trust", "Thought Leadership"];
+    const typedWord = document.getElementById("typed-word");
+    const cursor = document.getElementById("cursor");
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            typedWord.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedWord.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            setTimeout(() => isDeleting = true, 1000);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+
+        const typingSpeed = isDeleting ? 50 : 100;
+        setTimeout(type, typingSpeed);
+    }
+
+    document.addEventListener('DOMContentLoaded', type);
+</script>

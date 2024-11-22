@@ -1,0 +1,160 @@
+---
+import Container from "../components/Container.astro";
+
+const articles = [
+    {
+        title: "The Evolution of AI Journalism: Deep Learning's Impact on Media",
+        excerpt: "An in-depth analysis of how deep learning and neural networks are reshaping modern journalism and content creation",
+        publication: "TechCrunch",
+        logo: "https://cdn.icon-icons.com/icons2/2699/PNG/512/techcrunch_logo_icon_170624.png",
+        views: "245",
+        className: "col-span-2 h-full"
+    },
+    {
+        title: "Content Distribution Strategies for 2024",
+        excerpt: "Expert insights into emerging content distribution channels and optimization techniques",
+        publication: "Forbes",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Forbes_circle.png",
+        views: "180",
+        className: "h-full"
+    },
+    {
+        title: "The Rise of AI-Driven Personal Branding",
+        excerpt: "How artificial intelligence is transforming personal brand building and thought leadership",
+        publication: "WSJ",
+        logo: "/api/placeholder/80/30",
+        views: "156",
+        className: "h-full"
+    },
+    {
+        title: "Next-Gen Content Analytics",
+        excerpt: "Leveraging machine learning for deeper content performance insights",
+        publication: "Reuters",
+        logo: "/api/placeholder/80/30",
+        views: "132",
+        className: "h-full"
+    },
+    {
+        title: "Thought Leadership in the Digital Age",
+        excerpt: "Building authentic authority through AI-enhanced content strategies",
+        publication: "Bloomberg",
+        logo: "/api/placeholder/80/30",
+        views: "128",
+        className: "h-full"
+    }
+];
+---
+
+<div class="relative min-h-screen overflow-hidden font-sans bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30" id="home">
+    <!-- Animated Background Elements -->
+    <div aria-hidden="true" class="absolute inset-0 -z-10">
+        <div class="absolute top-0 right-0 w-96 h-96 -translate-y-1/2 translate-x-1/3 rounded-full bg-gradient-to-b from-blue-100 to-indigo-100 opacity-30 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 translate-y-1/3 -translate-x-1/2 rounded-full bg-gradient-to-t from-purple-100 to-pink-100 opacity-30 blur-3xl"></div>
+        
+        {Array.from({ length: 8 }).map((_, i) => (
+            <div
+                class="absolute rounded-full border border-indigo-200/20"
+                style={`
+                    width: 300px;
+                    height: 300px;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    transform: translate(-50%, -50%);
+                    animation: pulse ${Math.random() * 5 + 10}s ease-in-out infinite;
+                `}
+            />
+        ))}
+        
+        <div class="absolute inset-x-0 h-px -top-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+        <div class="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+    </div>
+
+       
+    <Container>
+        <div class="relative pt-48 pb-96">
+            <div class="text-center mx-auto mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="text-slate-800">Guaranteed Coverage for More</span><br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">
+                       Brand Visibility
+                    </span>
+                    <span class="text-slate-800">through Earned Media Features</span><br/>
+                </h1>
+                
+                <p class="text-slate-600 text-lg mb-10 max-w-2xl mx-auto">
+                    Differentiate your brand with strategic placements in Top Tier publications
+                </p>
+
+                <div class="flex justify-center gap-4 mb-10">
+                    <button class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-all shadow-sm">
+                        Book a Free Demo Now
+                    </button>
+                </div>
+
+                <div class="flex justify-center items-center gap-6 mb-16">
+                    <div class="flex gap-1">
+                        <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/techcrunch_logo_icon_170624.png" alt="TechCrunch" class="w-10 h-10 rounded-lg bg-white p-1 shadow-sm" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Forbes_circle.png" alt="Forbes" class="w-10 h-10 rounded-lg bg-white p-1 shadow-sm" />
+                    </div>
+                    <div class="h-8 w-px bg-slate-200"></div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-slate-600">400+ Publications</span>
+                    </div>
+                    <div class="h-8 w-px bg-slate-200"></div>
+                    <div class="flex items-center gap-2 text-slate-600">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                        <span>1.2M Views</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 grid-rows-2 gap-6">
+                {articles.map(article => (
+                    <div class={`group bg-white/80 backdrop-blur-sm rounded-xl p-6 hover:bg-white transition-all flex flex-col justify-between border border-slate-200 shadow-sm ${article.className}`}>
+                        <div>
+                            <div class="flex items-center gap-2 mb-4">
+                                <img src={article.logo} alt={article.publication} class="h-6 object-contain bg-white rounded p-0.5" />
+                                <span class="text-slate-600 text-sm">{article.publication}</span>
+                            </div>
+                            <h3 class="text-slate-800 font-medium text-lg mb-2 line-clamp-2 group-hover:text-indigo-600 transition-colors">{article.title}</h3>
+                            <p class="text-slate-600 text-sm mb-6 line-clamp-2">{article.excerpt}</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3 text-slate-500">
+                                <div class="flex items-center gap-1.5">
+                                    <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="m5 12 7-7 7 7M5 19l7-7 7 7"/>
+                                    </svg>
+                                    <span class="text-sm">300+</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    <span class="text-sm">{article.views}k</span>
+                                </div>
+                            </div>
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m9 18 6-6-6-6"/>
+                            </svg>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </Container>
+
+    <style>
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.1; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+        }
+    </style>
+</div>
+
+</div>

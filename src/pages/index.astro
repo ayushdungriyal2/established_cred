@@ -1,46 +1,58 @@
 ---
-import Stats from '../components/Stats.astro';
-import Features from '../components/Features.astro';
-import HeroSection from '../components/HeroSection.astro';
-import Layout from '../layouts/Layout.astro';
-import Testimonials from '../components/Testimonials.astro';
-import CallToAction from '../components/CallToAction.astro';
-import Blog from '../components/Blog.astro';
-import TopBanner from '../components/TopBanner.astro';
+import Vs from "../components/Vs.astro";
+import CaseStudy from "../components/CaseStudy.astro";
+import Features from "../components/Features.astro";
+import HeroSection from "../components/HeroSection.astro";
+import Layout from "../layouts/Layout.astro";
+import Testimonials from "../components/Testimonials.astro";
+import FAQ from "../components/FAQ.astro";
+import Logos from "../components/Logos.astro";
+import Intro from "../components/Intro.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Blog from "../components/Blog.astro";
+import TopBanner from "../components/TopBanner.astro";
+// import Intro2 from '../components/intro2.astro';
+import Vs2 from "../components/Vs2.astro";
+import Vs3 from "../components/Vs3.astro";
+import Features1 from "../components/Features1.astro";
+import Features2 from "../components/Features2.astro";
+import Features3 from "../components/Features3.astro";
+import Features4 from "../components/Features4.astro";
+// import Features5 from '../components/Features5.astro';
+import Companeis from "../components/Companeis.astro";
 ---
 
 <Layout title="Auto B2B">
-	<main class="space-y-40 mb-40">
-		<HeroSection/>
-		<Stats/>
-		<Features/>
-		<Testimonials/>
-		<Blog/>
-		<CallToAction/>
-	</main>
-
-	<!-- Sticky Button -->
-	<a 
-		href="#templates" 
-		class="fixed bottom-20 right-6 bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300 z-50 flex items-center space-x-2"
-	>
-		<span class="font-semibold">100+ Free Automations 🎁✨</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-			<path fill-rule="evenodd" d="M10 3a1 1 0 011 1v10.586l3.293-3.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 14.586V4a1 1 0 011-1z" clip-rule="evenodd"/>
-		</svg>
-	</a>
-
+  <main class="space-y-40 mb-40">
+    <HeroSection />
+    <Intro />
+    <Logos />
+    <Vs2 />
+    <Features />
+    <Features1 />
+     <Features2 />
+    <Features3 />
+    <Features4 />
+    <CaseStudy />
+    <Testimonials />
+	<Companeis />
+    <FAQ />
+  </main>
 </Layout>
 
 <style>
-	/* Optional: Add animation for the button */
-	@keyframes bounce {
-		0%, 100% { transform: translateY(0); }
-		50% { transform: translateY(-10px); }
-	}
+  /* Optional: Add animation for the button */
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 
-	.fixed {
-		animation: bounce 2s infinite;
-	}
+  .fixed {
+    animation: bounce 2s infinite;
+  }
 </style>
-

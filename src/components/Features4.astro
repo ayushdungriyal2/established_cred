@@ -1,0 +1,108 @@
+---
+import Container from "./Container.astro"
+---
+
+<section id="process" class="py-12 bg-gradient-to-b from-white via-gray-50 to-white">
+  <Container>
+    <div class="max-w-3xl mx-auto text-center mb-8">
+      <div class="inline-flex items-center justify-center p-2 bg-secondary/10 rounded-full mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary">
+          <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      
+      <h2 class="text-3xl font-bold text-gray-800 mb-3">
+        Our Proven Process
+      </h2>
+      <p class="text-base text-gray-600">
+        A systematic approach to scaling your partnerships and growth. We've refined our process to ensure maximum impact with minimum friction.
+      </p>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <!-- Vertical Connection Line -->
+      <div class="absolute hidden lg:block left-[2.75rem] top-0 bottom-0">
+        <div class="absolute inset-0 w-0.5 bg-gradient-to-b from-secondary/30 via-secondary/20 to-secondary/10"></div>
+        
+        <!-- Connection Dots -->
+        <div class="absolute inset-0 flex flex-col justify-around py-6">
+          <!-- {Array(4).fill().map((_, index) => (
+            <div class="relative">
+              <div class="absolute w-4 h-4 -ml-2 rounded-full border-2 border-secondary/30 transition-transform duration-300 group-hover:scale-125"></div>
+              <div class="absolute w-2 h-2 -ml-1 rounded-full bg-secondary transition-transform duration-300 group-hover:scale-110"></div>
+            </div>
+          ))} -->
+        </div>
+      </div>
+
+      <!-- Process Steps Stack -->
+      <div class="space-y-8">
+        {[
+          {
+            title: "Discovery",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>`,
+            description: "Understanding your goals, target audience, and current partnerships landscape",
+            features: ["Goals Analysis", "Market Research"]
+          },
+          {
+            title: "Strategy",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>`,
+            description: "Developing a tailored partnership strategy aligned with your objectives",
+            features: ["Partner Identification", "Outreach Planning"]
+          },
+          {
+            title: "Execution",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>`,
+            description: "Implementing the strategy with precision and continuous optimization",
+            features: ["Partner Outreach", "Deal Negotiation"]
+          },
+          {
+            title: "Growth",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>`,
+            description: "Scaling successful partnerships and measuring impact",
+            features: ["Performance Tracking", "Continuous Optimization"]
+          }
+        ].map((step, index) => (
+          <div class="relative group">
+            <div class="relative ml-20 lg:ml-28">
+              <!-- Card -->
+              <div class="relative p-6 rounded-2xl bg-white border border-gray-100 transition-all duration-300 hover:shadow-lg hover:shadow-gray-200/80">
+                <div class="space-y-4">
+                  <!-- Step Number & Icon -->
+                  <div class="flex items-center justify-between">
+                    <span class="text-3xl font-bold text-gray-200">0{index + 1}</span>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 text-gray-600" set:html={step.icon} />
+                  </div>
+
+                  <!-- Content -->
+                  <div class="space-y-3">
+                    <h3 class="text-lg font-semibold text-gray-800">{step.title}</h3>
+                    <p class="text-sm text-gray-600">{step.description}</p>
+                    <ul class="space-y-2">
+                      {step.features.map((feature) => (
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Container>
+</section>

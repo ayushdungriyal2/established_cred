@@ -1,0 +1,95 @@
+---
+import Container from "../components/Container.astro";
+
+const mediaPartners = [
+  "TechCrunch",
+  "Forbes",
+  "WSJ",
+  "Reuters",
+  "Bloomberg",
+  "VentureBeat",
+  "CNBC",
+  "Business Insider"
+];
+
+const clients = [
+  "Adobe",
+  "Salesforce",
+  "Microsoft",
+  "Google",
+  "Apple",
+  "Amazon",
+  "Meta",
+  "Twitter"
+];
+---
+
+<section class="py- relative bg-gradient-to-b from-white to-red-50/10">
+  <Container>
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div>
+        <div class="text-center mb-6">
+          <h3 class="text-lg font-semibold text-gray-700">Publications We Partner With</h3>
+        </div>
+        
+        <div class="relative overflow-hidden">
+          <div class="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div class="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+          
+          <!-- Two rows moving in opposite directions -->
+          <div class="flex flex-col gap-8">
+            <div class="flex gap-8 animate-flow-right whitespace-nowrap">
+              {[...mediaPartners, ...mediaPartners].map((logo) => (
+                <div class="flex-shrink-0">
+                  <div class="w-32 h-16 bg-white rounded-lg shadow-sm border border-red-100/20 flex items-center justify-center">
+                    <span class="text-sm text-gray-600 font-semibold">{logo}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div class="flex gap-8 animate-flow-left whitespace-nowrap">
+              {[...mediaPartners, ...mediaPartners].map((logo) => (
+                <div class="flex-shrink-0">
+                  <div class="w-32 h-16 bg-white rounded-lg shadow-sm border border-red-100/20 flex items-center justify-center">
+                    <span class="text-sm text-gray-600 font-semibold">{logo}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  @keyframes flowRight {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes flowLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-flow-right {
+    animation: flowRight 25s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-flow-left {
+    animation: flowLeft 20s linear infinite;
+    will-change: transform;
+  }
+</style>

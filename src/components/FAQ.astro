@@ -1,0 +1,195 @@
+---
+import Container from "./Container.astro"
+
+const faqs = [
+  {
+    question: "How long does the partnership process take?",
+    answer: "The timeline varies depending on your goals and target partners. Typically, our process takes 4-8 weeks from initial discovery to first partnership launch.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>`
+  },
+
+  {
+    question: "What types of partnerships do you handle?",
+    answer: "We specialize in B2B partnerships, strategic alliances, and channel partnerships across various industries, with a focus on tech, SaaS, and digital services.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>`
+  },
+  {
+    question: "Do you offer ongoing support?",
+    answer: "Yes, we provide continuous support and optimization for all partnerships we help establish. This includes regular check-ins, performance tracking, and strategy adjustments.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+    </svg>`
+  },
+  {
+    question: "What makes your approach unique?",
+    answer: "Our data-driven approach and extensive network of pre-vetted partners ensures faster, more successful partnerships. We combine technology with human expertise.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+    </svg>`
+  },
+  {
+    question: "How do you measure partnership success?",
+    answer: "We track key metrics including revenue growth, partner engagement, conversion rates, and ROI. Regular reporting keeps you informed of progress and areas for optimization.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+    </svg>`
+  }
+  
+  /* ... other FAQs ... */
+];
+---
+
+<div class="">
+  <Container>
+    <div class="flex items-center gap-3 mb-12">
+      <h2 class="text-2xl font-bold text-gray-700 md:text-4xl">
+        Frequently Asked Questions
+      </h2>
+    </div>
+    
+    {/* Changed flex to grid and made it responsive */}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+      {/* First Column */}
+      <div class="space-y-4">
+        {faqs.slice(0, Math.ceil(faqs.length / 2)).map((faq, index) => (
+          <div class="faq-item border border-gray-100 rounded-xl">
+            <button 
+              class="flex w-full items-center gap-4 p-5 text-left hover:text-secondary group"
+              aria-expanded="false"
+              onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
+            >
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-secondary/10 text-secondary transition-colors group-hover:bg-secondary group-hover:text-white flex-shrink-0" set:html={faq.icon} />
+              <span class="font-medium text-gray-700 flex-1">{faq.question}</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="h-5 w-5 text-gray-500 transition-transform duration-200 flex-shrink-0" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div 
+              class="faq-answer overflow-hidden"
+              aria-hidden="true"
+            >
+              <p class="px-5 pb-5 text-gray-600 ml-14">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Second Column */}
+      <div class="space-y-4">
+        {faqs.slice(Math.ceil(faqs.length / 2)).map((faq, index) => (
+          <div class="faq-item border border-gray-100 rounded-xl">
+            <button 
+              class="flex w-full items-center gap-4 p-5 text-left hover:text-secondary group"
+              aria-expanded="false"
+              onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
+            >
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-secondary/10 text-secondary transition-colors group-hover:bg-secondary group-hover:text-white flex-shrink-0" set:html={faq.icon} />
+              <span class="font-medium text-gray-700 flex-1">{faq.question}</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="h-5 w-5 text-gray-500 transition-transform duration-200 flex-shrink-0" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div 
+              class="faq-answer overflow-hidden"
+              aria-hidden="true"
+            >
+              <p class="px-5 pb-5 text-gray-600 ml-14">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Container>
+</div>
+
+<style>
+  .faq-item button[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .faq-item button[aria-expanded="true"] + .faq-answer {
+    max-height: 300px; /* Increased to handle longer answers */
+  }
+
+  .faq-item button[aria-expanded="true"] .rounded-full {
+    background-color: rgb(var(--color-secondary));
+    color: white;
+  }
+</style>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const faqButtons = document.querySelectorAll('.faq-item button');
+    
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        faqButtons.forEach(otherButton => {
+          if (otherButton !== button && otherButton.getAttribute('aria-expanded') === 'true') {
+            otherButton.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq-item button[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .faq-item button[aria-expanded="true"] + .faq-answer {
+    max-height: 200px;
+  }
+
+  .faq-item button[aria-expanded="true"] .rounded-full {
+    background-color: rgb(var(--color-secondary));
+    color: white;
+  }
+</style>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const faqButtons = document.querySelectorAll('.faq-item button');
+    
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        faqButtons.forEach(otherButton => {
+          if (otherButton !== button && otherButton.getAttribute('aria-expanded') === 'true') {
+            otherButton.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+  });
+</script>

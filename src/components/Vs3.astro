@@ -1,0 +1,156 @@
+---
+import Container from "./Container.astro";
+
+const features = [
+  {
+    title: "Media Placements",
+    us: {
+      action: "Guaranteed placement on leading platforms",
+      list: [
+        "Pre-secured spots in top media outlets",
+        "30-day minimum turnaround time",
+        "Quality placement guarantee",
+        "No additional fees per placement"
+      ]
+    },
+    them: {
+      action: "Try to secure coverage through pitching",
+      list: [
+        "Mass pitch to media outlets",
+        "3-6 months average wait time",
+        "No placement guarantees",
+        "Extra fees for successful placements"
+      ]
+    }
+  },
+  {
+    title: "Editorial Control",
+    us: {
+      action: "Full control over messaging",
+      list: [
+        "Pre-approved content angles",
+        "Brand message preservation",
+        "Collaborative editing process",
+        "Final approval rights"
+      ]
+    },
+    them: {
+      action: "Limited input on final content",
+      list: [
+        "Subject to journalist interpretation",
+        "Minimal control over angles",
+        "Limited revision options",
+        "No approval guarantees"
+      ]
+    }
+  },
+  {
+    title: "Campaign Success",
+    us: {
+      action: "100% success rate",
+      list: [
+        "Contractually guaranteed results",
+        "Transparent performance metrics",
+        "Regular progress updates",
+        "ROI tracking dashboard"
+      ]
+    },
+    them: {
+      action: "Variable success rates",
+      list: [
+        "Best-effort approach only",
+        "Basic performance reporting",
+        "Irregular updates",
+        "Limited success metrics"
+      ]
+    }
+  }
+];
+---
+
+<div class="py-24">
+  <Container>
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 mb-6">
+        The Clear Choice in PR
+      </h2>
+      <p class="text-lg text-gray-600">
+        See how our guaranteed approach compares to traditional PR firms
+      </p>
+    </div>
+
+    <div class="space-y-12">
+      {features.map((feature) => (
+        <div class="relative">
+          <div class="absolute left-1/2 -translate-x-1/2 -translate-y-12 bg-white px-8 py-2">
+            <h3 class="text-xl font-bold text-gray-800">{feature.title}</h3>
+          </div>
+
+          <div class="grid md:grid-cols-2 border border-gray-200 rounded-2xl overflow-hidden">
+            {/* Our Side */}
+            <div class="p-8 bg-secondary/5">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-secondary mb-1">Our Approach</div>
+                  <div class="font-medium text-gray-800">{feature.us.action}</div>
+                </div>
+              </div>
+
+              <ul class="space-y-3">
+                {feature.us.list.map((item) => (
+                  <li class="flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Their Side */}
+            <div class="p-8 bg-gray-50 border-l border-gray-200">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full bg-gray-200/50 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-gray-400 mb-1">Traditional PR</div>
+                  <div class="font-medium text-gray-600">{feature.them.action}</div>
+                </div>
+              </div>
+
+              <ul class="space-y-3">
+                {feature.them.list.map((item) => (
+                  <li class="flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-500">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- <div class="text-center mt-16">
+      <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-white rounded-full hover:bg-secondary/90 transition-colors">
+        Choose Guaranteed Results
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div> -->
+  </Container>
+</div>
