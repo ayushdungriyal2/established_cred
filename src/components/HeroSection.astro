@@ -124,22 +124,22 @@ const metrics = [
 
                     <div class="bg-slate-50 rounded-xl p-3 md:p-4 w-full">
                         <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-3">
-                            <h4 class="text-sm md:text-base font-medium text-slate-700">Top Publication Performance</h4>
-                            <span class="text-xs text-slate-500 mt-1 md:mt-0">Last 30 days</span>
+                            <h4 class="text-sm md:text-base font-medium text-slate-700">Top Publications Performance</h4>
+                            <!-- <span class="text-xs text-slate-500 mt-1 md:mt-0">Last 30 days</span> -->
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                             {[
-                                { name: "TechCrunch", articles: "12", reach: "3.2M" },
-                                { name: "Forbes", articles: "8", reach: "2.8M" },
+                                { name: "TechCrunch", articles: "12", reach: "14M" },
+                                { name: "Forbes", articles: "8", reach: "202.5M" },
                                 { name: "Reuters", articles: "7", reach: "2.1M" },
-                                { name: "VentureBeat", articles: "6", reach: "1.8M" },
-                                { name: "Bloomberg", articles: "5", reach: "1.6M" },
-                                { name: "WSJ", articles: "4", reach: "1.4M" }
+                                { name: "VentureBeat", articles: "6", reach: "1.96M" },
+                                { name: "FastCompany", articles: "5", reach: "7M" },
+                                { name: "USAToday", articles: "4", reach: "171M" }
                             ].map(pub => (
                                 <div class="flex items-center justify-between bg-white rounded-lg p-2 w-full">
                                     <div class="flex flex-col">
                                         <span class="text-xs font-medium text-slate-700">{pub.name}</span>
-                                        <span class="text-[10px] text-slate-500">{pub.articles} articles</span>
+                                        {/* <span class="text-[10px] text-slate-500">{pub.articles} articles</span>  */}
                                     </div>
                                     <span class="text-xs font-semibold text-blue-600">{pub.reach}</span>
                                 </div>
@@ -158,7 +158,7 @@ const metrics = [
                         { label: "Product Launch", reached: "4.2M", target: "5M" },
                         { label: "Funding News", reached: "3.8M", target: "4.5M" },
                         { label: "Industry Report", reached: "2.1M", target: "3M" },
-                        { label: "Thought Leader Feature", reached: "1.8M", target: "2.5M" },
+                        { label: "Thought Leadership Feature", reached: "1.8M", target: "2.5M" },
                         { label: "Partnership PR", reached: "1.2M", target: "2M" }
                     ].map(campaign => (
                         <div class="relative w-full">
