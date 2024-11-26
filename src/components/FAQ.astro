@@ -3,43 +3,89 @@ import Container from "./Container.astro"
 
 const faqs = [
   {
-    question: "How long does the partnership process take?",
-    answer: "The timeline varies depending on your goals and target partners. Typically, our process takes 4-8 weeks from initial discovery to first partnership launch.",
+    question: "What does the content creation process involve?",
+    answer: "Our content creation process is highly collaborative and tailored to your brand. Our team of expert writers and strategists will research your industry, target audience, and unique value proposition to craft compelling, high-quality content. You'll have the opportunity to review and provide feedback to ensure the final piece aligns with your vision.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+    </svg>`
+  },
+  {
+    question: "Do I get to review and edit the content before it is published?",
+    answer: "Yes, absolutely. We prioritize your input throughout the process. You'll receive the draft content for review and can suggest edits to ensure it reflects your brand voice and message. We only move forward with your approval, guaranteeing a result you're proud of.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+    </svg>`
+  },
+  {
+    question: "Are the media placements sponsored posts?",
+    answer: "No, the placements we secure are not paid or sponsored posts. We work with a network of trusted contributors and journalists to feature your brand in authentic, earned media stories, ensuring credibility and authority in your industry.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>`
+  },
+  {
+    question: "What types of media outlets can I expect to be featured in?",
+    answer: "We focus on securing placements in top-tier media outlets such as Forbes, Inc., USA Today, VentureBeat, and other highly regarded publications. Depending on your industry, we also target niche trade publications that resonate with your specific audience.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+    </svg>`
+  },
+  {
+    question: "How long does it take to secure media placements?",
+    answer: "Our process is designed for speed without compromising quality. You can expect your first top-tier media placement within 30 days of engagement. For longer-term campaigns, we deliver consistent placements over the agreed timeframe.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>`
   },
-
   {
-    question: "What types of partnerships do you handle?",
-    answer: "We specialize in B2B partnerships, strategic alliances, and channel partnerships across various industries, with a focus on tech, SaaS, and digital services.",
+    question: "Is the content optimized for SEO?",
+    answer: "Yes, all content we create is optimized for search engines to maximize visibility and impact. We conduct keyword research and integrate best practices to ensure your placements enhance your online presence and authority.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
     </svg>`
   },
   {
-    question: "Do you offer ongoing support?",
-    answer: "Yes, we provide continuous support and optimization for all partnerships we help establish. This includes regular check-ins, performance tracking, and strategy adjustments.",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>`
-  },
-  {
-    question: "What makes your approach unique?",
-    answer: "Our data-driven approach and extensive network of pre-vetted partners ensures faster, more successful partnerships. We combine technology with human expertise.",
+    question: "How are these placements different from traditional PR efforts?",
+    answer: "Unlike traditional PR firms that rely on unpredictable pitching with low success rates, we guarantee media placements within specific timelines. Our approach eliminates uncertainty, delivering tangible results quickly and efficiently.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
     </svg>`
   },
   {
-    question: "How do you measure partnership success?",
-    answer: "We track key metrics including revenue growth, partner engagement, conversion rates, and ROI. Regular reporting keeps you informed of progress and areas for optimization.",
+    question: "What kind of results can I expect from these placements?",
+    answer: "Our placements help establish authority, build credibility, and enhance trust with your audience. Tangible outcomes include increased website traffic, improved SEO rankings, heightened brand visibility, and greater interest from investors, customers, and partners.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+    </svg>`
+  },
+  {
+    question: "Can you help with other PR needs, like podcast appearances or press releases?",
+    answer: "Yes! In addition to media placements, we offer a range of services, including securing podcast guest spots, distributing press releases, and crafting thought leadership articles. These additional services amplify your brand's visibility across multiple channels.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+    </svg>`
+  },
+  {
+    question: "What industries or businesses do you specialize in working with?",
+    answer: "We primarily work with early-stage and high-growth startups in industries like FinTech, HealthTech, SaaS, and professional services. However, our approach is adaptable, and we've successfully helped brands across various sectors achieve their PR goals.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+    </svg>`
+  },
+  {
+    question: "How do you measure the impact of media placements on brand uplift?",
+    answer: "We provide detailed reports that track key metrics such as increased visibility, domain authority of publications, and audience reach. Additionally, we analyze website traffic, social engagement, and search trends to show how your brand awareness grows over time as a direct result of our placements.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
     </svg>`
+  },
+  {
+    question: "Do you track brand sentiment and pipeline growth from media coverage?",
+    answer: "Yes, we include sentiment analysis in our reports to gauge how positively your brand is being received in the media. We also integrate tracking tools like Google Analytics to measure pipeline growth, including demo requests, lead generation, and conversions stemming from the media exposure.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>`
   }
-  
-  /* ... other FAQs ... */
 ];
 ---
 
@@ -62,7 +108,10 @@ const faqs = [
               aria-expanded="false"
               onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
             >
-              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-secondary/10 text-secondary transition-colors group-hover:bg-secondary group-hover:text-white flex-shrink-0" set:html={faq.icon} />
+              <div 
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-secondary/10 text-secondary transition-colors group-hover:bg-secondary group-hover:text-white flex-shrink-0 icon-container" 
+                set:html={faq.icon} 
+              />
               <span class="font-medium text-gray-700 flex-1">{faq.question}</span>
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -95,7 +144,10 @@ const faqs = [
               aria-expanded="false"
               onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
             >
-              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-secondary/10 text-secondary transition-colors group-hover:bg-secondary group-hover:text-white flex-shrink-0" set:html={faq.icon} />
+              <div 
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-secondary/10 text-secondary transition-colors group-hover:bg-secondary group-hover:text-white flex-shrink-0 icon-container" 
+                set:html={faq.icon} 
+              />
               <span class="font-medium text-gray-700 flex-1">{faq.question}</span>
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -133,48 +185,24 @@ const faqs = [
   }
 
   .faq-item button[aria-expanded="true"] + .faq-answer {
-    max-height: 300px; /* Increased to handle longer answers */
+    max-height: 300px;
   }
 
-  .faq-item button[aria-expanded="true"] .rounded-full {
+  /* Updated icon styles */
+  .icon-container {
+    z-index: 1;
+  }
+
+  .faq-item button[aria-expanded="true"] .icon-container {
     background-color: rgb(var(--color-secondary));
     color: white;
   }
-</style>
 
-<script>
-  document.addEventListener('astro:page-load', () => {
-    const faqButtons = document.querySelectorAll('.faq-item button');
-    
-    faqButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        faqButtons.forEach(otherButton => {
-          if (otherButton !== button && otherButton.getAttribute('aria-expanded') === 'true') {
-            otherButton.setAttribute('aria-expanded', 'false');
-          }
-        });
-      });
-    });
-  });
-</script>
-
-<style>
-  .faq-item button[aria-expanded="true"] svg {
-    transform: rotate(180deg);
-  }
-
-  .faq-answer {
-    max-height: 0;
-    transition: max-height 0.3s ease-out;
-  }
-
-  .faq-item button[aria-expanded="true"] + .faq-answer {
-    max-height: 200px;
-  }
-
-  .faq-item button[aria-expanded="true"] .rounded-full {
-    background-color: rgb(var(--color-secondary));
-    color: white;
+  /* Ensure SVG stays visible */
+  .icon-container svg {
+    width: 20px;
+    height: 20px;
+    display: block;
   }
 </style>
 
