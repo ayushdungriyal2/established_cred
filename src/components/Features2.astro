@@ -1,112 +1,124 @@
 ---
-import Container from "./Container.astro"
+import Container from "./Container.astro";
 ---
 
-<section id="process" class=" pb-16 bg-gradient-to-b darkcancelfrom-gray-900 darkcancelto-gray-800">
+<div class="">
   <Container>
-    <div class="max-w-3xl mx-auto text-center mb-12">
-      <div class="inline-flex items-center justify-center p-2 bg-secondary/10 rounded-full mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
-          <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
-        </svg>
-      </div>
-      
-      <h2 class="text-3xl font-bold text-gray-700 darkcanceltext-white mb-3">
-        Our Proven Process
-      </h2>
-      <p class="text-gray-600 darkcanceltext-gray-300">
-        A systematic approach to scaling your partnerships and growth. We've refined our process to ensure maximum impact with minimum friction.
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+        The Comprehensive PR Solution
+      </h1>
+      <p class="text-xl text-gray-600">
+        For Early-Stage and High-Growth Brands
       </p>
+      <div class="mt-6 w-20 h-1 bg-secondary/30 mx-auto rounded-full"></div>
     </div>
 
-    <div class="relative max-w-4xl mx-auto">
-      {/* Timeline Line */}
-      <div class="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-secondary/20" />
-
-      {/* Steps */}
-      <div class="relative space-y-8 md:space-y-12">
-        {[
-          {
-            title: "Discovery",
-            icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            ),
-            description: "Understanding your goals, target audience, and current partnerships landscape",
-            features: ["Goals Analysis", "Market Research"]
-          },
-          {
-            title: "Strategy",
-            icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-              </svg>
-            ),
-            description: "Developing a tailored media partnership strategy aligned with your objectivess",
-            features: ["Media Partner Identification", "Outreach Planning"]
-          },
-          {
-            title: "Execution",
-            icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            ),
-            description: "Implementing the strategy with precision and continuous optimization",
-            features: ["Media Partner Outreach", "Article Placement"]
-          },
-          {
-            title: "Growth",
-            icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            ),
-            description: "Scaling successful partnerships and measuring impact",
-            features: ["Performance Tracking", "Continuous Optimization"]
-          }
-        ].map((step, index) => (
-          <div class={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8`}>
-            {/* Timeline Dot */}
-            <div class="absolute left-4 md:left-1/2 w-8 h-8 -translate-x-1/2 rounded-full bg-white border-2 border-secondary flex items-center justify-center">
-              <span class="text-sm font-bold text-secondary">0{index + 1}</span>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#8974FF] to-[#6B4EFF] rounded-3xl"></div>
+        
+        <div class="relative p-8">
+          <div class="space-y-6">
+            <!-- Editorials -->
+            <div class="flex items-start gap-4 bg-[#9F8FFF] hover:bg-[#8974FF] transition-colors duration-300 rounded-xl p-4 shadow-sm backdrop-blur-sm bg-opacity-20">
+              <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
+                  <path d="M18 14h-8"/>
+                  <path d="M15 18h-5"/>
+                  <path d="M10 6h8v4h-8V6Z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white">Editorials</h4>
+                <p class="text-sm text-white/80 mt-1">Compelling stories that capture attention</p>
+              </div>
             </div>
 
-            {/* Content Card */}
-            <div class={`relative ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
-              <div class="group">
-                <div class="relative overflow-hidden rounded-xl bg-white darkcancelbg-gray-800 border border-gray-100 darkcancelborder-gray-700 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
-                  {/* Gradient Bar Top */}
-                  <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary/40 to-secondary"></div>
-                  
-                  <div class="p-6">
-                    <div class="flex items-center gap-4 mb-4">
-                      <div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
-                        {step.icon}
-                      </div>
-                      <h3 class="text-lg font-semibold text-gray-700 darkcanceltext-white">{step.title}</h3>
-                    </div>
+            <!-- Interviews -->
+            <div class="flex items-start gap-4 bg-[#9F8FFF] hover:bg-[#8974FF] transition-colors duration-300 rounded-xl p-4 shadow-sm backdrop-blur-sm bg-opacity-20">
+              <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white">Interviews</h4>
+                <p class="text-sm text-white/80 mt-1">Share your expertise with the world</p>
+              </div>
+            </div>
 
-                    <p class="text-sm text-gray-600 darkcanceltext-gray-300 mb-4">{step.description}</p>
+            <!-- Thought Leadership -->
+            <div class="flex items-start gap-4 bg-[#9F8FFF] hover:bg-[#8974FF] transition-colors duration-300 rounded-xl p-4 shadow-sm backdrop-blur-sm bg-opacity-20">
+              <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+                  <path d="M9 18h6"/>
+                  <path d="M10 22h4"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white">Thought Leadership</h4>
+                <p class="text-sm text-white/80 mt-1">Establish industry authority</p>
+              </div>
+            </div>
 
-                    <div class="space-y-2">
-                      {step.features.map((feature) => (
-                        <div class="flex items-center gap-2 text-sm text-gray-600 darkcanceltext-gray-300">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-secondary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+            <!-- Announcements -->
+            <div class="flex items-start gap-4 bg-[#9F8FFF] hover:bg-[#8974FF] transition-colors duration-300 rounded-xl p-4 shadow-sm backdrop-blur-sm bg-opacity-20">
+              <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m3 11 18-5v12L3 14v-3z"/>
+                  <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white">Announcements</h4>
+                <p class="text-sm text-white/80 mt-1">Amplify your milestones</p>
               </div>
             </div>
           </div>
-        ))}
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="space-y-6">
+        <div class="inline-block px-4 py-2 bg-[#8974FF]/10 rounded-full">
+          <span class="text-sm font-medium text-[#8974FF]">PR Solution</span>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-700">Accelerate Your Brand's Growth</h3>
+        <p class="text-gray-600">Transform your brand's visibility with our targeted PR strategies designed specifically for emerging businesses ready to make their mark.</p>
+        
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 flex items-center justify-center rounded-full bg-[#8974FF]/10 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#8974FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span class="text-gray-600">Tailored PR strategies aligned with your growth stage</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 flex items-center justify-center rounded-full bg-[#8974FF]/10 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#8974FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span class="text-gray-600">Strategic media placements in top-tier publications</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 flex items-center justify-center rounded-full bg-[#8974FF]/10 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#8974FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span class="text-gray-600">Data-driven approach to maximize media coverage</span>
+          </div>
+        </div>
       </div>
     </div>
   </Container>
-</section>
+</div>
