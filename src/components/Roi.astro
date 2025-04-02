@@ -1,0 +1,235 @@
+---
+import Container from "./Container.astro";
+---
+
+<div class="" id="roi">
+  <Container>
+    <!-- Centered Header Section -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 darkcanceltext-white mb-6">
+        Calculate Your ROI
+      </h1>
+      <p class="text-xl text-gray-600 darkcanceltext-gray-300">
+        See how our PR solution can boost your revenue in just 90 days
+      </p>
+      <div class="mt-6 w-20 h-1 bg-secondary/30 mx-auto rounded-full"></div>
+    </div>
+
+    
+
+    <!-- Main Content Area -->
+    <div class="max-w-4xl mx-auto">
+      <!-- Card with both calculator and results -->
+      <div class="relative bg-purple-50/70 darkcancelbg-gray-800 rounded-3xl shadow-xl overflow-hidden border border-purple-100">
+        <!-- Top Accent Border -->
+        <div class="absolute top-0 left-0 right-0 h-2 bg-secondary"></div>
+
+        <!-- Card Content -->
+        <div class="p-8">
+          <!-- Steps Indicator -->
+          <div class="flex justify-center mb-8">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-semibold">1</div>
+              <span class="text-gray-700 darkcanceltext-white font-medium">Input Your Data</span>
+            </div>
+            <div class="w-16 h-px bg-gray-300 darkcancelbg-gray-600 self-center mx-4"></div>
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gray-200 darkcancelbg-gray-700 text-gray-600 darkcanceltext-gray-300 flex items-center justify-center font-semibold">2</div>
+              <span class="text-gray-500 darkcanceltext-gray-400 font-medium">View Results</span>
+            </div>
+          </div>
+
+          <!-- Calculator Form -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Left Side: Inputs -->
+            <div class="space-y-6">
+              <h3 class="text-xl font-bold text-gray-800 darkcanceltext-white mb-4">Your Business Metrics</h3>
+              
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <label class="block text-sm font-medium text-gray-700 darkcanceltext-gray-300">
+                    Average Annual Contract Value (ACV)
+                  </label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <span class="text-gray-500 darkcanceltext-gray-400">$</span>
+                    </div>
+                    <input 
+                      type="number" 
+                      id="acv" 
+                      placeholder="25000"
+                      class="block w-full pl-8 pr-4 py-3 border-gray-300 darkcancelborder-gray-600 rounded-lg bg-purple-50/50 darkcancelbg-purple-900/5 focus:ring-2 focus:ring-secondary focus:border-secondary"
+                    />
+                  </div>
+                  <p class="text-xs text-gray-500 darkcanceltext-gray-400 italic">What's your average deal size?</p>
+                </div>
+
+                <div class="space-y-2">
+                  <label class="block text-sm font-medium text-gray-700 darkcanceltext-gray-300">
+                    Monthly Inbound SQLs
+                  </label>
+                  <input 
+                    type="number" 
+                    id="sqls" 
+                    placeholder="20"
+                    class="block w-full px-4 py-3 border-gray-300 darkcancelborder-gray-600 rounded-lg bg-purple-50/50 darkcancelbg-purple-900/5 focus:ring-2 focus:ring-secondary focus:border-secondary"
+                  />
+                  <p class="text-xs text-gray-500 darkcanceltext-gray-400 italic">How many qualified leads per month?</p>
+                </div>
+
+                <div class="space-y-2">
+                  <label class="block text-sm font-medium text-gray-700 darkcanceltext-gray-300">
+                    Current Close Rate
+                  </label>
+                  <div class="relative">
+                    <input 
+                      type="number" 
+                      id="closeRate" 
+                      placeholder="20"
+                      class="block w-full px-4 py-3 border-gray-300 darkcancelborder-gray-600 rounded-lg bg-purple-50/50 darkcancelbg-purple-900/5 focus:ring-2 focus:ring-secondary focus:border-secondary"
+                    />
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <span class="text-gray-500 darkcanceltext-gray-400">%</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-gray-500 darkcanceltext-gray-400 italic">What % of leads convert to customers?</p>
+                </div>
+
+                <div class="space-y-2">
+                  <label class="block text-sm font-medium text-gray-700 darkcanceltext-gray-300">
+                    Sales Cycle Length
+                  </label>
+                  <div class="relative">
+                    <input 
+                      type="number" 
+                      id="salesCycle" 
+                      placeholder="45"
+                      class="block w-full px-4 py-3 border-gray-300 darkcancelborder-gray-600 rounded-lg bg-purple-50/50 darkcancelbg-purple-900/5 focus:ring-2 focus:ring-secondary focus:border-secondary"
+                    />
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <span class="text-gray-500 darkcanceltext-gray-400">days</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-gray-500 darkcanceltext-gray-400 italic">How long to close a typical deal?</p>
+                </div>
+
+                <button 
+                  id="calculateButton"
+                  class="w-full py-4 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition flex items-center justify-center gap-2 mt-4"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5v14"></path>
+                  </svg>
+                  Calculate My 90-Day ROI
+                </button>
+              </div>
+            </div>
+            
+            <!-- Right Side: Results -->
+            <div id="results" class="relative bg-purple-50/70 darkcancelbg-purple-900/10 p-6 rounded-2xl border border-purple-100 darkcancelborder-purple-900/20 hidden md:block">
+              <div class="text-center mb-8">
+                <div class="inline-block p-3 rounded-full bg-purple-100 darkcancelbg-purple-800/20 mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 20V10"></path>
+                    <path d="M18 20V4"></path>
+                    <path d="M6 20v-4"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 darkcanceltext-white">Your ROI Projection</h3>
+                <p class="text-sm text-gray-600 darkcanceltext-gray-300 mt-2">Complete the form to see your custom results</p>
+              </div>
+              
+              <!-- Empty state with sample calculations -->
+              <div class="space-y-6">
+                <div class="flex justify-between items-center pb-2 border-b border-gray-200 darkcancelborder-gray-700">
+                  <span class="text-sm font-medium text-gray-600 darkcanceltext-gray-300">Improved Close Rate</span>
+                  <span class="text-lg font-bold text-secondary" id="improvedRateDisplay">—</span>
+                </div>
+                
+                <div class="flex justify-between items-center pb-2 border-b border-gray-200 darkcancelborder-gray-700">
+                  <span class="text-sm font-medium text-gray-600 darkcanceltext-gray-300">Additional Closed Deals (90 days)</span>
+                  <span class="text-lg font-bold text-secondary" id="dealsDisplay">—</span>
+                </div>
+                
+                <div class="flex justify-between items-center pb-2 border-b border-gray-200 darkcancelborder-gray-700">
+                  <span class="text-sm font-medium text-gray-600 darkcanceltext-gray-300">New Revenue Influenced</span>
+                  <span class="text-lg font-bold text-secondary" id="revenueDisplay">—</span>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                  <span class="text-sm font-medium text-gray-600 darkcanceltext-gray-300">Your Total ROI</span>
+                  <span class="text-2xl font-bold text-secondary" id="roiDisplay">—</span>
+                </div>
+              </div>
+              
+        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const calculateButton = document.getElementById('calculateButton');
+      calculateButton?.addEventListener('click', calculateROI);
+      
+      function calculateROI() {
+        // Get input elements with proper typing
+        const acvInput = document.getElementById('acv') as HTMLInputElement;
+        const sqlsInput = document.getElementById('sqls') as HTMLInputElement;
+        const closeRateInput = document.getElementById('closeRate') as HTMLInputElement;
+        const salesCycleInput = document.getElementById('salesCycle') as HTMLInputElement;
+        
+        // Get values with proper typing
+        const acv = Number(acvInput?.value) || 25000;
+        const sqls = Number(sqlsInput?.value) || 20;
+        const closeRate = Number(closeRateInput?.value) || 20;
+        const salesCycle = Number(salesCycleInput?.value) || 45;
+        
+        // Calculate results
+        const improvedCloseRate = closeRate * 1.25; // 25% improvement
+        const monthlyClosedDealsBefore = sqls * (closeRate / 100);
+        const monthlyClosedDealsAfter = sqls * (improvedCloseRate / 100);
+        const additionalDeals = (monthlyClosedDealsAfter - monthlyClosedDealsBefore) * 3;
+        const newRevenue = additionalDeals * acv;
+        const roi = ((newRevenue - 7500) / 7500) * 100;
+        
+        // Update display with proper typing
+        const improvedRateDisplay = document.getElementById('improvedRateDisplay');
+        const dealsDisplay = document.getElementById('dealsDisplay');
+        const revenueDisplay = document.getElementById('revenueDisplay');
+        const roiDisplay = document.getElementById('roiDisplay');
+        
+        if (improvedRateDisplay) improvedRateDisplay.textContent = `${improvedCloseRate.toFixed(1)}%`;
+        if (dealsDisplay) dealsDisplay.textContent = additionalDeals.toFixed(1);
+        if (revenueDisplay) revenueDisplay.textContent = `$${newRevenue.toLocaleString()}`;
+        if (roiDisplay) roiDisplay.textContent = `${roi.toFixed(0)}%`;
+        
+        // Show the results section on mobile if hidden
+        const results = document.getElementById('results');
+        if (results) {
+          results.classList.remove('hidden');
+        }
+        
+        // Update steps indicator
+        const stepsIndicator = document.querySelector('.flex.justify-center.mb-8');
+        if (stepsIndicator) {
+          stepsIndicator.innerHTML = `
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center font-semibold">✓</div>
+              <span class="text-gray-700 darkcanceltext-white font-medium">Input Complete</span>
+            </div>
+            <div class="w-16 h-px bg-green-300 darkcancelbg-green-600 self-center mx-4"></div>
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-semibold">2</div>
+              <span class="text-gray-700 darkcanceltext-white font-medium">Results Ready</span>
+            </div>
+          `;
+        }
+      }
+    });
+  </script>
+</div>
