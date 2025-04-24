@@ -195,7 +195,7 @@ import Container from "./Container.astro";
         const monthlyClosedDealsAfter = sqls * (improvedCloseRate / 100);
         const additionalDeals = (monthlyClosedDealsAfter - monthlyClosedDealsBefore) * 3;
         const newRevenue = additionalDeals * acv;
-        const roi = ((newRevenue - 7500) / 7500) * 100;
+        const roi = ((newRevenue - 12000) / 12000) * 100; // Updated to use $12,000 instead of $7,500
         
         // Update display with proper typing
         const improvedRateDisplay = document.getElementById('improvedRateDisplay');
